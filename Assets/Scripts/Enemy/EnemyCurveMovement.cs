@@ -11,10 +11,15 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
     private Vector2 _previousPoint;
     private Vector2 _offset;
     private float splineLength;
-    protected override void Awake()
+    protected override void OnEnable()
     {
         ai.OnSetMovement.AddListener(SetMovement);
-        base.Awake();
+        base.OnEnable();
+    }
+    protected override void OnDisable()
+    {
+        ai.OnSetMovement.RemoveListener(SetMovement);
+        base.OnDisable();
     }
 
     private void SetMovement(SpriteShapeController waveCurve, Vector2 waveOffset)

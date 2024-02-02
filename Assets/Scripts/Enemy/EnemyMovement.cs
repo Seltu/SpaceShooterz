@@ -7,9 +7,13 @@ public abstract class EnemyMovement<T> : MonoBehaviour where T : CurveEnemyAi
 {
     [SerializeField] protected T ai;
 
-    protected virtual void Awake()
+    protected virtual void OnEnable()
     {
         ai.OnMove.AddListener(Move);
+    }
+    protected virtual void OnDisable()
+    {
+        ai.OnMove.RemoveListener(Move);
     }
 
     protected virtual void Start()

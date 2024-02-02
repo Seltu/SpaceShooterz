@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2593313091513247472}
   - component: {fileID: 2593313091513247473}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 2593313092045311405}
   - component: {fileID: 2593313092045311392}
   - component: {fileID: 4670821093117758234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   damage: 5
   weaponStats:
     bulletAmount: 1
-    fireRate: 5
+    fireRate: 10
     projectileSpeed: 25
     bulletAngle: 15
     bulletTilt: 0
@@ -208,6 +208,7 @@ MonoBehaviour:
     maxTilt: 0
   movementSpeed: 7
   bulletPool: {fileID: 4670821093117758234}
+  invincibilityTime: 0
 --- !u!114 &2593313092045311395
 MonoBehaviour:
   m_ObjectHideFlags: 0

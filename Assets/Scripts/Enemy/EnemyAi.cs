@@ -10,7 +10,7 @@ public class EnemyAi : MonoBehaviour
     [HideInInspector] public UnityEvent<Vector2> OnDeath;
     [SerializeField] private EnemyStats enemyStats;
     private bool _delay;
-    private void Update()
+    protected virtual void Update()
     {
         OnMove.Invoke();
         if (_delay) return;

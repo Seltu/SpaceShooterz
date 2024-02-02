@@ -50,7 +50,7 @@ MonoBehaviour:
       number: 6
       curve: 1
       offset: {x: 0, y: 0}
-    - enemy: 1
+    - enemy: 0
       number: 6
       curve: 2
       offset: {x: 0, y: 0}
@@ -114,4 +114,5 @@ MonoBehaviour:
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
   nextLevel: 
+  infoSO: {fileID: 11400000, guid: bc0b9185e8f06d84da9aac2f3d6b4d02, type: 2}
   progress: 0

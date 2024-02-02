@@ -915,9 +915,29 @@ PrefabInstance:
       propertyPath: enemyLines.Array.data[7]
       value: 
       objectReference: {fileID: 429834393}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7776567081768597181, guid: d7b9a97ebda5c4144a7d4474b66960b9, type: 3}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 5540064452426300581, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: enemyPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3903479507038855211, guid: a8245187e402f9b458df56a695262251, type: 3}
     - target: {fileID: 1265149085781173116, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_Name
       value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265149085781173116, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}

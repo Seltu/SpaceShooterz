@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<SpriteShapeController> enemyLines;
     [SerializeField] private List<CurveEnemyAi> enemyPrefabs;
     [SerializeField] private string nextLevel;
+    [SerializeField] private LevelInfoSO infoSO;
     // [SerializeField] private List<Pickup> pickupPrefabs;
     // [SerializeField] private BossEnemy _boss;
     public int progress;
@@ -38,9 +39,11 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        infoSO.players = new List<PlayerController>();
         for (var index = 0; index < players.Count; index++)
         {
             var player = players[index];
+            infoSO.players.Add(player);
             player.OnDeath.AddListener(PlayerDied);
             players.Remove(player);
         }

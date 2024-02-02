@@ -55,26 +55,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7689281888666319304, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Name
-      value: EnemyShip Variant
+      value: EnemyRed
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: weaponStats.fireRate
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
@@ -104,6 +92,18 @@ PrefabInstance:
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281889180553865, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalPosition.x
