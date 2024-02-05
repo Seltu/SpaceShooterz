@@ -137,7 +137,7 @@ public class LevelManager : MonoBehaviour
     {
         var enemy = Instantiate(enemyPrefabs[type]);
         enemy.OnSetMovement.Invoke(enemyLines[curve], offset);
-        enemy.SetDelay(delay * enemy.GetStats().GetWeaponStats().fireRate);
+        enemy.SetDelay(delay*5);
         enemy.OnDeath.AddListener(SpawnPickup);
     }
 

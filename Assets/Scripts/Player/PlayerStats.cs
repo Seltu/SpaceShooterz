@@ -12,11 +12,6 @@ public class PlayerStats : ShipStats
     {
         return base.GetDamage() * _damageMultiplier;
     }
-    
-    public float GetFireRate()
-    {
-        return base.GetWeaponStats().fireRate * _fireRateMultiplier;
-    }
 
     protected override void TakeHit(Bullet bullet)
     {

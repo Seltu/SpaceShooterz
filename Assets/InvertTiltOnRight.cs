@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InvertTiltOnRight : MonoBehaviour
 {
-    [SerializeField] private ShipStats ShipStats;
+    [SerializeField] private WeaponStats weaponStats;
 
     private void Start()
     {
         if (transform.position.x > 0)
-            ShipStats.GetWeaponStats().bulletTilt = -ShipStats.GetWeaponStats().bulletTilt;
+            weaponStats.BulletTilt = -weaponStats.BulletTilt;
     }
 }

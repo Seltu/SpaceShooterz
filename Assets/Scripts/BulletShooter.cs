@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class BulletShooter : MonoBehaviour
 {
-    [SerializeField] private ShipStats _shipStats;
+    [SerializeField] private WeaponStats _weaponStats;
     [SerializeField] private Bullet bulletPrefab;
-    private WeaponStats WeaponStats => _shipStats.GetWeaponStats();
     private float _cooldown;
     private float _bulletTilt;
     private bool _invertedTilt;
@@ -27,31 +26,33 @@ public class BulletShooter : MonoBehaviour
 
     private void ShootPattern(GameObject ship)
     {
-        if(ship != _shipStats.gameObject) return;
+        if(ship != _weaponStats.Ship.gameObject) return;
         if(_cooldown > 0) return;
-        _cooldown = 1f / WeaponStats.fireRate;
-        var startingAngle = WeaponStats.bulletAmount <= 1 ? 0 : -WeaponStats.bulletAngle * WeaponStats.bulletAmount / 2 + WeaponStats.bulletAngle / 2;
-        for(var i = 0; i < WeaponStats.bulletAmount; i++)
+        _cooldown = 1f / _weaponStats.FireRate;
+        var startingAngle = _weaponStats.BulletAmount <= 1 ? 0 : -_weaponStats.BulletAngle * _weaponStats.BulletAmount / 2 + _weaponStats.BulletAngle / 2;
+        var startingSpread = _weaponStats.BulletAmount <= 1 ? 0 : -_weaponStats.BulletWideness * _weaponStats.BulletAmount / 2 + _weaponStats.BulletWideness / 2;
+        for (var i = 0; i < _weaponStats.BulletAmount; i++)
         {
-            Shoot(startingAngle+i*WeaponStats.bulletAngle);
+            Shoot(startingAngle+i* _weaponStats.BulletAngle, startingSpread + i * _weaponStats.BulletWideness);
         }
-        _bulletTilt += _invertedTilt ? WeaponStats.bulletTilt: -WeaponStats.bulletTilt;
-        if(WeaponStats.invertTilt)
+        _bulletTilt += _invertedTilt ? _weaponStats.BulletTilt: -_weaponStats.BulletTilt;
+        if(_weaponStats.InvertTilt)
         {
-            if (Mathf.Abs(_bulletTilt) > WeaponStats.maxTilt)
+            if (Mathf.Abs(_bulletTilt) > _weaponStats.MaxTilt)
             {
                 _invertedTilt = !_invertedTilt;
             }
         }
     }
 
-    private void Shoot(float angle)
+    private void Shoot(float angle, float spread)
     {
         var transform1 = transform;
-        var position = (Vector2)transform1.position + WeaponStats.offset;
-        var rotation = transform1.rotation * Quaternion.AngleAxis(WeaponStats.angleOffset + angle + _bulletTilt, Vector3.forward);
-        var bullet = _shipStats.GetBulletPool().Create(bulletPrefab, position, rotation);
-        bullet.SetDirection(bullet.transform.up * WeaponStats.projectileSpeed);
-        bullet.SetShipStats(_shipStats);
+        var position = (Vector2)transform1.position + _weaponStats.Offset + new Vector2(Random.Range(-_weaponStats.RandomSize.x, _weaponStats.RandomSize.x),
+                                                                                        Random.Range(-_weaponStats.RandomSize.y, _weaponStats.RandomSize.y));
+        var rotation = transform1.rotation * Quaternion.AngleAxis(_weaponStats.AngleOffset + angle + _bulletTilt, Vector3.forward);
+        var bullet = _weaponStats.Ship.GetBulletPool().Create(bulletPrefab, position, rotation);
+        bullet.SetDirection((Vector2)bullet.transform.up * _weaponStats.ProjectileSpeed + Vector2.Perpendicular(bullet.transform.up)*spread);
+        bullet.SetShipStats(_weaponStats.Ship);
     }
 }

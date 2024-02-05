@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class EnemyMovement<T> : MonoBehaviour where T : CurveEnemyAi 
+public abstract class EnemyMovement<T> : MonoBehaviour where T : EnemyAi
 {
     [SerializeField] protected T ai;
 

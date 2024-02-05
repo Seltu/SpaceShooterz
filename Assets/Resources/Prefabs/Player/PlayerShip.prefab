@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa53100fd8fe0418338b3a10c56486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shipStats: {fileID: 2593313092045311404}
+  _weaponStats: {fileID: 4230255008431317122}
   bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
 --- !u!1 &2593313092045311409
 GameObject:
@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 2593313092045311400}
   - component: {fileID: 2593313092045311406}
   - component: {fileID: 2593313092045311404}
+  - component: {fileID: 4230255008431317122}
   - component: {fileID: 2593313092045311395}
   - component: {fileID: 2593313092045311394}
   - component: {fileID: 2593313092045311405}
@@ -196,19 +197,32 @@ MonoBehaviour:
   team: 0
   maxHp: 20
   damage: 5
-  weaponStats:
-    bulletAmount: 1
-    fireRate: 10
-    projectileSpeed: 25
-    bulletAngle: 15
-    bulletTilt: 0
-    offset: {x: 0, y: 0}
-    angleOffset: 0
-    invertTilt: 0
-    maxTilt: 0
   movementSpeed: 7
   bulletPool: {fileID: 4670821093117758234}
   invincibilityTime: 0
+--- !u!114 &4230255008431317122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2593313092045311409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482e99a61f77c1644a1ae7037b20ab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 2593313092045311404}
+  bulletAmount: 1
+  fireRate: 8
+  projectileSpeed: 20
+  bulletAngle: 0
+  bulletTilt: 0
+  offset: {x: 0, y: 0}
+  randomSize: {x: 0, y: 0}
+  angleOffset: 0
+  invertTilt: 0
+  maxTilt: 0
 --- !u!114 &2593313092045311395
 MonoBehaviour:
   m_ObjectHideFlags: 0
