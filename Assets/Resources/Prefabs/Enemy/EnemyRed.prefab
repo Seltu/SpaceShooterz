@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa53100fd8fe0418338b3a10c56486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shipStats: {fileID: 8802211789917715093}
+  _weaponStats: {fileID: 1194137659646105187}
   bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
 --- !u!1001 &1194137658972963672
 PrefabInstance:
@@ -53,6 +53,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319304, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Name
       value: EnemyRed
@@ -115,15 +119,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
---- !u!114 &8802211789917715093 stripped
+--- !u!114 &1194137659646105187 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
   m_PrefabInstance: {fileID: 1194137658972963672}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a97378e2a9428947ae4a4e81e30cfd1, type: 3}
+  m_Script: {fileID: 11500000, guid: 482e99a61f77c1644a1ae7037b20ab6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8802211789917715094 stripped

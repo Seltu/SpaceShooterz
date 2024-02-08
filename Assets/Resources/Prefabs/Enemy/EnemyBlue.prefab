@@ -7,6 +7,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: bulletAmount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.data[0]
+      value: 7277904052045479939
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.data[1]
+      value: 7277904052045479940
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479939]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479940]
+      value: Assembly-CSharp BulletTiltModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479940].bulletTilt
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479939].bulletAngle
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319304, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Name
       value: EnemyBlue

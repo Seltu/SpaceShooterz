@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BossEnemyAi : EnemyAi
 {
-    [SerializeField] private int bossCycle = 1;
     [SerializeField] private List<BossStep> bossSteps;
     [SerializeField] private Transform shootPointsParent;
     protected int _bossStep = -1;
@@ -18,7 +17,7 @@ public class BossEnemyAi : EnemyAi
         }
         else
         {
-            if (_bossStep < bossCycle)
+            if (_bossStep < bossSteps.Count)
             {
                 _bossStep += 1;
             }

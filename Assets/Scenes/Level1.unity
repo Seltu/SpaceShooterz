@@ -376,14 +376,13 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  bulletAngle: 0
-  bulletWideness: 0
-  bulletTilt: 0
-  offset: {x: 0, y: 0}
-  randomSize: {x: 0, y: 0}
-  angleOffset: 0
-  invertTilt: 0
-  maxTilt: 0
+  invertTime: 0
+  maxTime: 0
+  modifiers:
+    list: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &524199001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +452,7 @@ Transform:
   - {fileID: 2029894003}
   - {fileID: 801127528}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &712777106
 PrefabInstance:
@@ -468,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5715413928417153657, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5715413928417153657, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -561,14 +560,18 @@ MonoBehaviour:
   bulletAmount: 6
   fireRate: 1
   projectileSpeed: 7
-  bulletAngle: 2
-  bulletWideness: 8
-  bulletTilt: 0
-  offset: {x: 0, y: 0}
-  randomSize: {x: 0, y: 0}
-  angleOffset: 0
-  invertTilt: 0
-  maxTilt: 0
+  invertTime: 0
+  maxTime: 0
+  modifiers:
+    list:
+    - rid: 7277904016805462019
+  references:
+    version: 2
+    RefIds:
+    - rid: 7277904016805462019
+      type: {class: BulletWidenessModifier, ns: , asm: Assembly-CSharp}
+      data:
+        bulletWideness: 10
 --- !u!114 &764528934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,6 +881,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3382b57a45ae704438d319a5b61b2522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1232437924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.596413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6842532
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981968108148902453, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: m_Name
+      value: EnemyGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: bulletAmount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: modifiers.list.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: modifiers.list.Array.data[0]
+      value: 7277904052045479946
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: managedReferences[7277904052045479946]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+      propertyPath: managedReferences[7277904052045479946].bulletAngle
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
 --- !u!114 &1261109406 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6450257543567948582, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
@@ -955,7 +1035,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911494610
 GameObject:
@@ -1006,14 +1086,13 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  bulletAngle: 0
-  bulletWideness: 0
-  bulletTilt: 0
-  offset: {x: 0, y: 0}
-  randomSize: {x: 0, y: 0}
-  angleOffset: 0
-  invertTilt: 0
-  maxTilt: 0
+  invertTime: 0
+  maxTime: 0
+  modifiers:
+    list: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1911494613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173116, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
@@ -1354,6 +1433,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593313092045311415, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: modifiers.list.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: modifiers.list.Array.data[0]
+      value: 7277903991786176524
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[7277903991786176523]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[7277903991786176524]
+      value: Assembly-CSharp BulletWidenessModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[7277903991786176523].bulletAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[7277903991786176524].bulletWideness
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1449,7 +1552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7689281887112135868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,7 +1636,7 @@ Transform:
   m_Children:
   - {fileID: 2103998463}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &7689281887112135872
 MonoBehaviour:
@@ -1569,7 +1672,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyStats: {fileID: 7689281887112135868}
-  bossCycle: 1
   bossSteps:
   - stepShooters:
     - {fileID: 61009913}
@@ -1647,11 +1749,15 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  bulletAngle: 0
-  bulletWideness: 0
-  bulletTilt: 0
-  offset: {x: 0, y: 0}
-  randomSize: {x: 6.5, y: 0}
-  angleOffset: 0
-  invertTilt: 0
-  maxTilt: 0
+  invertTime: 0
+  maxTime: 0
+  modifiers:
+    list:
+    - rid: 7277904016805462022
+  references:
+    version: 2
+    RefIds:
+    - rid: 7277904016805462022
+      type: {class: BulletRandomSizeModifier, ns: , asm: Assembly-CSharp}
+      data:
+        randomSize: {x: 6.5, y: 0}

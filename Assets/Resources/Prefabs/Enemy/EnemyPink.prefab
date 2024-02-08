@@ -7,6 +7,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: bulletAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: projectileSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.data[0]
+      value: 7277904052045479943
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: modifiers.list.Array.data[1]
+      value: 7277904052045479944
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479943]
+      value: Assembly-CSharp BulletTiltModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479944]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479943].bulletTilt
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479944].bulletAngle
+      value: 72
+      objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319298, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -81,6 +121,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+--- !u!114 &863915935969311304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+  m_PrefabInstance: {fileID: 863915935296171891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010116514232424123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482e99a61f77c1644a1ae7037b20ab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7010116514232424123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7689281888666319304, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
@@ -98,15 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6169aafd8889b864dab8785e2a3cc3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipStats: {fileID: 7010116514232424126}
---- !u!114 &7010116514232424126 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
-  m_PrefabInstance: {fileID: 863915935296171891}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7010116514232424123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a97378e2a9428947ae4a4e81e30cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  weaponStats: {fileID: 863915935969311304}

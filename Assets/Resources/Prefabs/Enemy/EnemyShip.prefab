@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7689281888666319298}
   - component: {fileID: 4455976589124030296}
   - component: {fileID: 1946425456148292284}
+  - component: {fileID: 673142075}
   m_Layer: 6
   m_Name: EnemyShip
   m_TagString: Player
@@ -175,16 +176,6 @@ MonoBehaviour:
   team: 1
   maxHp: 20
   damage: 1
-  weaponStats:
-    bulletAmount: 1
-    fireRate: 1
-    projectileSpeed: 10
-    bulletAngle: 0
-    bulletTilt: 0
-    offset: {x: 0, y: 0}
-    angleOffset: 0
-    invertTilt: 0
-    maxTilt: 0
   movementSpeed: 4
   bulletPool: {fileID: 1946425456148292284}
 --- !u!114 &7689281888666319298
@@ -234,6 +225,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72359378c5548f478cafaa1274f379e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &673142075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689281888666319304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482e99a61f77c1644a1ae7037b20ab6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 7689281888666319309}
+  bulletAmount: 1
+  fireRate: 5
+  projectileSpeed: 10
+  invertTime: 0
+  maxTime: 0
+  modifiers:
+    list: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &7689281889180553866
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,5 +292,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa53100fd8fe0418338b3a10c56486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shipStats: {fileID: 7689281888666319309}
+  _weaponStats: {fileID: 673142075}
   bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}

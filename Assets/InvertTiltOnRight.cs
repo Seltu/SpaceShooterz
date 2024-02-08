@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InvertTiltOnRight : MonoBehaviour
@@ -8,7 +9,9 @@ public class InvertTiltOnRight : MonoBehaviour
 
     private void Start()
     {
-        if (transform.position.x > 0)
-            weaponStats.BulletTilt = -weaponStats.BulletTilt;
+        if (transform.position.x > 0) {
+            var tilt = weaponStats.Modifiers.Find(sh => sh is BulletTiltModifier) as BulletTiltModifier;
+            tilt.BulletTilt = -tilt.BulletTilt;
+        }
     }
 }
