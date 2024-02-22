@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524198998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.45, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -376,8 +376,6 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  invertTime: 0
-  maxTime: 0
   modifiers:
     list: []
   references:
@@ -452,7 +450,7 @@ Transform:
   - {fileID: 2029894003}
   - {fileID: 801127528}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &712777106
 PrefabInstance:
@@ -465,9 +463,97 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyLines
       objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_MaxArrayCount
+      value: 5456
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_ActiveSplineHash
+      value: 749536919
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].position.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].position.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].position.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[2].position.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[3].position.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[4].position.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115956, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[4].position.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115958, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115958, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115959, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.07424736
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115959, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: 8.537636
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115959, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 20.251024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346606007073115959, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 2.7876358
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045676, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_MaxArrayCount
+      value: 1592
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045676, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_ActiveSplineHash
+      value: 880558233
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045676, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[0].position.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045676, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045677, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654229219413045677, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 12.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5715413928417153657, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5715413928417153657, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
       propertyPath: m_LocalPosition.x
@@ -560,8 +646,6 @@ MonoBehaviour:
   bulletAmount: 6
   fireRate: 1
   projectileSpeed: 7
-  invertTime: 0
-  maxTime: 0
   modifiers:
     list:
     - rid: 7277904016805462019
@@ -881,83 +965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3382b57a45ae704438d319a5b61b2522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1232437924
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.596413
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.6842532
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902451, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981968108148902453, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: m_Name
-      value: EnemyGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: bulletAmount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: modifiers.list.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: modifiers.list.Array.data[0]
-      value: 7277904052045479946
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: managedReferences[7277904052045479946]
-      value: Assembly-CSharp BulletAngleModifier
-      objectReference: {fileID: 0}
-    - target: {fileID: 8157299156764714694, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
-      propertyPath: managedReferences[7277904052045479946].bulletAngle
-      value: 15
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
 --- !u!114 &1261109406 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6450257543567948582, guid: b1032eb125a9b864584ec31ec1a3dd25, type: 3}
@@ -1035,7 +1042,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911494610
 GameObject:
@@ -1063,7 +1070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911494610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.45, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1086,8 +1093,6 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  invertTime: 0
-  maxTime: 0
   modifiers:
     list: []
   references:
@@ -1252,7 +1257,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1265149085781173106, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173106, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1354,6 +1359,14 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[3]
       value: 
       objectReference: {fileID: 3903479507038855211, guid: a8245187e402f9b458df56a695262251, type: 3}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: rounds.Array.data[0].waves.Array.data[1].enemy
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
+      propertyPath: rounds.Array.data[0].waves.Array.data[0].number
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173116, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -1383,13 +1396,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2593313092045311404, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
-      propertyPath: weaponStats.fireRate
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2593313092045311409, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: m_Name
       value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593313092045311414, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593313092045311415, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: m_RootOrder
@@ -1436,28 +1449,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: fireRate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: projectileSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: modifiers.list.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: modifiers.list.Array.data[0]
-      value: 7277903991786176524
+      value: 7277904216713330691
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
-      propertyPath: managedReferences[7277903991786176523]
-      value: Assembly-CSharp BulletAngleModifier
+      propertyPath: managedReferences[7277904216713330691]
+      value: Assembly-CSharp BulletTiltModifier
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
-      propertyPath: managedReferences[7277903991786176524]
-      value: Assembly-CSharp BulletWidenessModifier
+      propertyPath: managedReferences[7277904216713330691].maxTime
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
-      propertyPath: managedReferences[7277903991786176523].bulletAngle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
-      propertyPath: managedReferences[7277903991786176524].bulletWideness
-      value: 0
+      propertyPath: managedReferences[7277904216713330691].bulletTilt
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
@@ -1636,7 +1653,7 @@ Transform:
   m_Children:
   - {fileID: 2103998463}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &7689281887112135872
 MonoBehaviour:
@@ -1749,15 +1766,18 @@ MonoBehaviour:
   bulletAmount: 1
   fireRate: 8
   projectileSpeed: 8
-  invertTime: 0
-  maxTime: 0
   modifiers:
     list:
     - rid: 7277904016805462022
+    - rid: 7277904216713330690
   references:
     version: 2
     RefIds:
     - rid: 7277904016805462022
       type: {class: BulletRandomSizeModifier, ns: , asm: Assembly-CSharp}
       data:
-        randomSize: {x: 6.5, y: 0}
+        randomSize: {x: 9, y: 0}
+    - rid: 7277904216713330690
+      type: {class: BulletSpeedModifier, ns: , asm: Assembly-CSharp}
+      data:
+        extraSpeed: 1

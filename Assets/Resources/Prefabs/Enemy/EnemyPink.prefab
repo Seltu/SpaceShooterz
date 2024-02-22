@@ -20,6 +20,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[-2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: modifiers.list.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -40,11 +44,35 @@ PrefabInstance:
       value: Assembly-CSharp BulletAngleModifier
       objectReference: {fileID: 0}
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904216713330691]
+      value: Assembly-CSharp BulletTiltModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904369431609344]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479943].maxTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904216713330691].maxTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: managedReferences[7277904052045479943].bulletTilt
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904216713330691].bulletTilt
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: managedReferences[7277904052045479944].bulletAngle
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904369431609344].bulletAngle
       value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319298, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
@@ -54,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 7689281888666319304, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Name
       value: EnemyPink
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: movementSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: weaponStats.bulletTilt
@@ -73,15 +105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.99
+      value: -2.0969903
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.59
+      value: 5.6583295
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -93,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -105,20 +137,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2023428287, guid: 31fcf23353d6e35409f166bcdb3c4adc, type: 3}
+    - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.b
-      value: 0.91832733
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319321, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319321, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281889180553864, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8124217783562454498, guid: 4130b3a165815bb488b03db051b5384b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
 --- !u!114 &863915935969311304 stripped

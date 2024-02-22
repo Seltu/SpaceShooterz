@@ -5,8 +5,7 @@ public class BulletShooter : MonoBehaviour
     [SerializeField] private WeaponStats _weaponStats;
     [SerializeField] private Bullet bulletPrefab;
     private float _cooldown;
-    private float _bulletTime;
-    private bool _invertedTime;
+    private int _bulletTime;
     
     private void OnEnable()
     {
@@ -34,14 +33,7 @@ public class BulletShooter : MonoBehaviour
             var shotInfo = new ShotInfo(_weaponStats, i, _bulletTime, transform.position, 0, Vector2.zero);
             Shoot(shotInfo);
         }
-        _bulletTime += _invertedTime ? 1: -1;
-        if(_weaponStats.InvertTime)
-        {
-            if (Mathf.Abs(_bulletTime) > _weaponStats.MaxTime)
-            {
-                _invertedTime = !_invertedTime;
-            }
-        }
+        _bulletTime += 1;
     }
 
     private void Shoot(ShotInfo shotInfo)

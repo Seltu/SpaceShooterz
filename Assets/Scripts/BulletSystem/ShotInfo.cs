@@ -6,12 +6,12 @@ public struct ShotInfo
 {
     public WeaponStats weaponStats;
     public int bulletIndex;
-    public float bulletTime;
+    public int bulletTime;
     public Vector2 position;
     public float rotationShift;
     public Vector2 directionShift;
 
-    public ShotInfo(WeaponStats weaponStats, int bulletIndex, float bulletTime, Vector2 position, float rotationShift, Vector2 direction)
+    public ShotInfo(WeaponStats weaponStats, int bulletIndex, int bulletTime, Vector2 position, float rotationShift, Vector2 direction)
     {
         this.weaponStats = weaponStats;
         this.bulletIndex = bulletIndex;

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: fireRate
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: projectileSpeed
@@ -24,6 +24,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319309, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: weaponStats.fireRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -36,8 +40,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.861786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.6583295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -49,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -61,11 +73,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319310, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1428204432, guid: 75d3bc54337d0864d9930576188da618, type: 3}
+    - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.g
@@ -73,8 +89,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319311, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319319, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5ca6b0146b46a794899716e7dc37df5d, type: 2}
+    - target: {fileID: 7689281888666319321, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.46084657
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319321, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.9825
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281888666319321, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.92594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689281889180553864, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1112529868039131926, guid: 9d0b9e91227e782499ad6c28bef6acf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
 --- !u!1 &1981968108711125367 stripped

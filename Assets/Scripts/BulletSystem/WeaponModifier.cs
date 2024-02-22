@@ -32,6 +32,19 @@ public class BulletAngleModifier : WeaponModifier
     }
 }
 
+public class BulletArrayModifier : WeaponModifier
+{
+    [SerializeField] int bulletsPerArray;
+    [SerializeField] float arrayAngle;
+    public override ShotInfo Modify(ShotInfo input)
+    {
+        if (bulletsPerArray == 0) return input;
+        var startingAngle = input.weaponStats.BulletAmount <= 1 ? 0 : -arrayAngle * (input.weaponStats.BulletAmount / bulletsPerArray)/2 + arrayAngle / 2;
+        input.rotationShift += startingAngle + input.bulletIndex/bulletsPerArray * arrayAngle;
+        return input;
+    }
+}
+
 public class BulletWidenessModifier : WeaponModifier
 {
 
@@ -79,12 +92,30 @@ public class BulletAngleOffsetModifier : WeaponModifier
 public class BulletTiltModifier : WeaponModifier
 {
     [SerializeField] private float bulletTilt;
-
+    [SerializeField] private int maxTime;
     public float BulletTilt { get => bulletTilt; set => bulletTilt = value; }
 
     public override ShotInfo Modify(ShotInfo input)
     {
-        input.rotationShift += input.bulletTime * BulletTilt;
+        var calculatedTime = input.bulletTime;
+        if (maxTime > 0)
+        {
+            var sign = input.bulletTime % (maxTime*2) > input.bulletTime % maxTime ? -1 : 1;
+            calculatedTime = input.bulletTime % maxTime;
+            calculatedTime = sign*maxTime/2 -sign*calculatedTime;
+        }
+        input.rotationShift += calculatedTime * BulletTilt;
+        return input;
+    }
+}
+
+public class BulletSpeedModifier : WeaponModifier
+{
+    [SerializeField] private float extraSpeed;
+
+    public override ShotInfo Modify(ShotInfo input)
+    {
+        input.directionShift += Vector2.up * extraSpeed;
         return input;
     }
 }

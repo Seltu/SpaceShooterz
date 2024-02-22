@@ -110,12 +110,12 @@ public class LevelManager : MonoBehaviour
     
     private IEnumerator AddRound(Round currentRound)
     {
-        _levelTimer = 12f;
+        _levelTimer = 16f;
         foreach (var wave in currentRound.waves)
         {
             StartCoroutine(AddWave(wave));
         }
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
         progress += 1;
         if (_bossFight)
         {
@@ -127,9 +127,9 @@ public class LevelManager : MonoBehaviour
     {
         for (var i=0; i < wave.number; i++)
         {
-            yield return new WaitForSeconds(1f / wave.number);
+            yield return new WaitForSeconds(2f / wave.number);
             MakeEnemy(wave.enemy, wave.curve, wave.offset, i);
-            yield return new WaitForSeconds(1f / wave.number);
+            yield return new WaitForSeconds(2f / wave.number);
         }
     }
 
