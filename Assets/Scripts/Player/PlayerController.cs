@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public UnityEvent OnDeath;
     [HideInInspector] public UnityEvent<Vector2> OnMove;
-    [HideInInspector] public UnityEvent<Vector2> OnPoint;
     [HideInInspector] public UnityEvent OnShoot;
     [SerializeField] private PlayerStats playerStats;
     internal object onDeath;

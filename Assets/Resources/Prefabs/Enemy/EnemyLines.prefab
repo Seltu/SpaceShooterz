@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2346606007073115958}
   - component: {fileID: 2346606007073115959}
   - component: {fileID: 2346606007073115956}
+  - component: {fileID: 3122872339674553241}
   m_Layer: 0
   m_Name: EnemyLine5
   m_TagString: Untagged
@@ -65,8 +66,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2346606007073115957}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5715413928417153657}
@@ -128,8 +129,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.07198334, y: 5.7991037, z: 0}
-    m_Extent: {x: 14.276224, y: 2.5491037, z: 0}
+    m_Center: {x: -0.054517746, y: 8.541773, z: 0}
+    m_Extent: {x: 18.279026, y: 2.7917724, z: 0}
 --- !u!114 &2346606007073115956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -14, y: 8, z: 0}
+    - position: {x: -18, y: 11, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0, y: 3.5, z: 0}
+    - position: {x: 0, y: 6, z: 0}
       leftTangent: {x: -8, y: 0, z: 0}
       rightTangent: {x: 8, y: 0, z: -0}
       mode: 1
@@ -165,7 +166,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 14, y: 8, z: 0}
+    - position: {x: 18, y: 11, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 1
@@ -175,7 +176,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0, y: 3.5, z: 0}
+    - position: {x: 0, y: 6, z: 0}
       leftTangent: {x: 8, y: 0, z: -0}
       rightTangent: {x: -8, y: 0, z: 0}
       mode: 1
@@ -185,7 +186,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -14, y: 8, z: 0}
+    - position: {x: -18, y: 11, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -211,6 +212,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &3122872339674553241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346606007073115957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2346606007073115956}
+  enemyBox: {fileID: 0}
 --- !u!1 &2654229219413045675
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +237,7 @@ GameObject:
   - component: {fileID: 2654229219413045678}
   - component: {fileID: 2654229219413045677}
   - component: {fileID: 2654229219413045676}
+  - component: {fileID: 5741059575226259210}
   m_Layer: 0
   m_Name: EnemyLine0
   m_TagString: Untagged
@@ -301,7 +317,7 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.25, y: 10.25, z: 0}
+    m_Extent: {x: 0.25, y: 12.25, z: 0}
 --- !u!114 &2654229219413045676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +333,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: 0, y: 10, z: 0}
+    - position: {x: 0, y: 12, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -327,7 +343,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 0, y: -10, z: 0}
+    - position: {x: 0, y: -12, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -353,6 +369,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &5741059575226259210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654229219413045675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2654229219413045676}
+  enemyBox: {fileID: 0}
 --- !u!1 &2654229219724276890
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +394,7 @@ GameObject:
   - component: {fileID: 2654229219724276893}
   - component: {fileID: 2654229219724276892}
   - component: {fileID: 2654229219724276891}
+  - component: {fileID: 8927017177320514764}
   m_Layer: 0
   m_Name: EnemyLine2
   m_TagString: Untagged
@@ -442,8 +473,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 2.9726353, y: 4.1322327, z: 0}
-    m_Extent: {x: 21.276924, y: 8.172056, z: 0}
+    m_Center: {x: 2.9661446, y: 4.140668, z: 0}
+    m_Extent: {x: 21.283607, y: 6.176794, z: 0}
 --- !u!114 &2654229219724276891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +490,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -18, y: 12, z: 0}
+    - position: {x: -18, y: 10, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -469,10 +500,10 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 24, y: -4, z: 0}
+    - position: {x: 24, y: -2, z: 0}
       leftTangent: {x: -40, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
-      mode: 2
+      mode: 1
       height: 0.1
       bevelCutoff: 0
       bevelSize: 0
@@ -495,6 +526,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &8927017177320514764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654229219724276890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2654229219724276891}
+  enemyBox: {fileID: 0}
 --- !u!1 &2654229220014278569
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +551,7 @@ GameObject:
   - component: {fileID: 2654229220014278572}
   - component: {fileID: 2654229220014278571}
   - component: {fileID: 2654229220014278570}
+  - component: {fileID: 8625633502758211786}
   m_Layer: 0
   m_Name: EnemyLine6
   m_TagString: Untagged
@@ -584,8 +630,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 4.904113, y: 7.187933, z: 0}
-    m_Extent: {x: 15.25234, y: 4.1602945, z: 0}
+    m_Center: {x: 3.9013872, y: 6.7968388, z: 0}
+    m_Extent: {x: 14.252985, y: 4.554759, z: 0}
 --- !u!114 &2654229220014278570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,10 +657,10 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 20, y: 11, z: 0}
+    - position: {x: 18, y: 10, z: 0}
       leftTangent: {x: -6, y: -18, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
-      mode: 2
+      mode: 1
       height: 0.1
       bevelCutoff: 0
       bevelSize: 0
@@ -637,6 +683,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &8625633502758211786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654229220014278569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2654229220014278570}
+  enemyBox: {fileID: 0}
 --- !u!1 &2654229220408801700
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +708,7 @@ GameObject:
   - component: {fileID: 2654229220408801703}
   - component: {fileID: 2654229220408801702}
   - component: {fileID: 2654229220408801701}
+  - component: {fileID: 8293116068458169061}
   m_Layer: 0
   m_Name: EnemyLine7
   m_TagString: Untagged
@@ -726,8 +787,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -4.904112, y: 7.187933, z: 0}
-    m_Extent: {x: 15.25234, y: 4.1602945, z: 0}
+    m_Center: {x: -3.9013863, y: 6.7968388, z: 0}
+    m_Extent: {x: 14.252985, y: 4.554759, z: 0}
 --- !u!114 &2654229220408801701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,10 +814,10 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -20, y: 11, z: 0}
+    - position: {x: -18, y: 10, z: 0}
       leftTangent: {x: 6, y: -18, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
-      mode: 2
+      mode: 1
       height: 0.1
       bevelCutoff: 0
       bevelSize: 0
@@ -779,6 +840,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &8293116068458169061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654229220408801700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2654229220408801701}
+  enemyBox: {fileID: 0}
 --- !u!1 &2654229220575369929
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +865,7 @@ GameObject:
   - component: {fileID: 2654229220575369932}
   - component: {fileID: 2654229220575369931}
   - component: {fileID: 2654229220575369930}
+  - component: {fileID: 2730885083102230103}
   m_Layer: 0
   m_Name: EnemyLine1
   m_TagString: Untagged
@@ -868,8 +944,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -2.9726353, y: 4.1322327, z: 0}
-    m_Extent: {x: 21.276924, y: 8.172056, z: 0}
+    m_Center: {x: -2.9661446, y: 4.140668, z: 0}
+    m_Extent: {x: 21.283607, y: 6.176794, z: 0}
 --- !u!114 &2654229220575369930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +961,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: 18, y: 12, z: 0}
+    - position: {x: 18, y: 10, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -895,10 +971,10 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -24, y: -4, z: 0}
+    - position: {x: -24, y: -2, z: 0}
       leftTangent: {x: 40, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
-      mode: 2
+      mode: 1
       height: 0.1
       bevelCutoff: 0
       bevelSize: 0
@@ -921,6 +997,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &2730885083102230103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654229220575369929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 2654229220575369930}
+  enemyBox: {fileID: 0}
 --- !u!1 &6450257543567948585
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +1022,7 @@ GameObject:
   - component: {fileID: 6450257543567948580}
   - component: {fileID: 6450257543567948583}
   - component: {fileID: 6450257543567948582}
+  - component: {fileID: 1804897417357694684}
   m_Layer: 0
   m_Name: EnemyLine4
   m_TagString: Untagged
@@ -1073,6 +1164,20 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &1804897417357694684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450257543567948585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 6450257543567948582}
+  enemyBox: {fileID: 0}
 --- !u!1 &8304335961325624015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1189,7 @@ GameObject:
   - component: {fileID: 8304335961325624012}
   - component: {fileID: 8304335961325624013}
   - component: {fileID: 8304335961325624014}
+  - component: {fileID: 7242900058582922713}
   m_Layer: 0
   m_Name: EnemyLine3
   m_TagString: Untagged
@@ -1225,3 +1331,17 @@ MonoBehaviour:
   m_EnableTangents: 0
   m_GeometryCached: 0
   m_UTess2D: 0
+--- !u!114 &7242900058582922713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304335961325624015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3bd8e32580388340aff3d904691d916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShape: {fileID: 8304335961325624014}
+  enemyBox: {fileID: 0}

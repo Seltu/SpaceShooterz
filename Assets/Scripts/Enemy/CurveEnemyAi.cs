@@ -6,5 +6,5 @@ using UnityEngine.U2D;
 
 public class CurveEnemyAi : EnemyAi
 {
-    [HideInInspector] public UnityEvent<SpriteShapeController, Vector2> OnSetMovement;
+    [HideInInspector] public UnityEvent<EnemyLine, Vector2, int> OnSetMovement;
 }
