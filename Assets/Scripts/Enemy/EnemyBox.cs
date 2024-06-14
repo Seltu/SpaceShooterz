@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +7,9 @@ public class EnemyPoint
 {
     private Transform worldPoint;
     private bool taken = false;
+    private int timesTaken = 0;
+    public event Action onRelease;
+    public event Action onBoxShoot;
 
     public EnemyPoint(Transform transform)
     {
@@ -15,8 +17,15 @@ public class EnemyPoint
         Taken = false;
     }
 
+    internal void Release()
+    {
+        Taken = true;
+        onRelease.Invoke();
+    }
+
     public Transform WorldPoint { get => worldPoint; set => worldPoint = value; }
     public bool Taken { get => taken; set => taken = value; }
+    public int TimesTaken { get => timesTaken; set => timesTaken = value; }
 }
 public class EnemyBox : MonoBehaviour
 {
@@ -85,15 +94,29 @@ public class EnemyBox : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        foreach (var layer in _points)
+        {
+            foreach (var point in layer)
+            {
+
+            }
+        }
+    }
+
     internal EnemyPoint PickPoint(int layer)
     {
         layer = Mathf.Clamp(layer, 0, pointGrids.Count - 1);
         var pointGrid = pointGrids[layer];
-        Vector2Int middle = new Vector2Int(pointGrid.x / 2, pointGrid.y / 2);
-        Vector2Int pickedPoint = new Vector2Int(-1, -1);
+        Vector2Int middle = new(pointGrid.x / 2, pointGrid.y / 2);
+        Vector2Int pickedPoint = -Vector2Int.one;
         float minDistance = float.MaxValue;
+        int minTimesTaken = int.MaxValue;
 
         var layerTotal = pointGrids.Take(layer).Sum(grid => grid.y);
+
+        bool noVacancy = false;
 
         // Bounding box limits
         Vector2Int? boundingBoxMin = null;
@@ -125,7 +148,7 @@ public class EnemyBox : MonoBehaviour
         {
             for (int j = 0; j < pointGrid.y; j++)
             {
-                if (!_points[i][j + layerTotal].Taken)
+                if (!_points[i][j + layerTotal].Taken || noVacancy)
                 {
                     //If there's a vacant spot to fill in the center rectangle, it should ignore any spots outside it
                     if (boundingBoxMin.HasValue && boundingBoxMax.HasValue)
@@ -142,17 +165,35 @@ public class EnemyBox : MonoBehaviour
 
                     if (distance < minDistance)
                     {
+                        //If enemy has to free a taken spot, it prioritizes spots that have been taken the least amount of times
+                        if (noVacancy && _points[i][j + layerTotal].TimesTaken <= minTimesTaken)
+                        {
+                            Debug.Log(i + " e " + j + layerTotal + " taken " + _points[i][j + layerTotal].TimesTaken);
+                            minTimesTaken = _points[i][j + layerTotal].TimesTaken;
+                        }
+                        else if (noVacancy)
+                            continue;
                         minDistance = distance;
                         pickedPoint = new Vector2Int(i, j);
                     }
                 }
             }
+            if (i >= pointGrid.x-1 && pickedPoint.Equals(-Vector2Int.one))
+            {
+                noVacancy = true;
+                i = -1;
+            }
         }
         //Offsets y position by the total size of the layers above it
         pickedPoint.y += layerTotal;
 
+        //If picked spot was already taken, release enemy in it
+        if(noVacancy)
+            _points[pickedPoint.x][pickedPoint.y].Release();
+
         //Marks the picked spot as taken
         _points[pickedPoint.x][pickedPoint.y].Taken = true;
+        _points[pickedPoint.x][pickedPoint.y].TimesTaken++;
 
 
         return _points[pickedPoint.x][pickedPoint.y];
@@ -171,9 +212,7 @@ public class EnemyBox : MonoBehaviour
                 }
             }
         }
-
         return false;
     }
-
 
 }

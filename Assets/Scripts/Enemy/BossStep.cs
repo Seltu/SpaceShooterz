@@ -8,4 +8,5 @@ public struct BossStep
 {
     public List<GameObject> stepShooters;
     public Round stepSummons;
+    public float stepDuration;
 }

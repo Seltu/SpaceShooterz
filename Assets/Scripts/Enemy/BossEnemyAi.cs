@@ -6,18 +6,20 @@ public class BossEnemyAi : EnemyAi
 {
     [SerializeField] private List<BossStep> bossSteps;
     [SerializeField] private Transform shootPointsParent;
-    protected int _bossStep = -1;
+    protected int _bossStep = 0;
     private float _bossTimer = 1;
     private bool _summon = true;
     protected override void Update()
     {
-        if (_bossTimer < 1)
+        if (_bossTimer > 0)
         {
-            _bossTimer += Time.deltaTime / 15;
+            _bossTimer -= Time.deltaTime;
         }
         else
         {
-            if (_bossStep < bossSteps.Count)
+            _bossTimer = bossSteps[_bossStep].stepDuration;
+            OnStep();
+            if (_bossStep < bossSteps.Count-1)
             {
                 _bossStep += 1;
             }
@@ -25,9 +27,6 @@ public class BossEnemyAi : EnemyAi
             {
                 _bossStep = 0;
             }
-
-            _bossTimer = 0;
-            OnStep();
         }
         base.Update();
     }

@@ -8,15 +8,15 @@ using UnityEngine.U2D;
 public class Round
 {
     public List<Wave> waves;
+    public float duration;
 
     public Round(List<Wave> list)
     {
         waves = list;
     }
 
-    public void AddWave(int enemy, int number, int curve, int layer)
+    public void AddWave(Wave wave)
     {
-        var wave = new Wave(enemy, number, curve, layer);
         waves.Add(wave);
     }
 }
@@ -28,6 +28,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<CurveEnemyAi> enemyPrefabs;
     [SerializeField] private string nextLevel;
     [SerializeField] private LevelInfoSO infoSO;
+    
     // [SerializeField] private List<Pickup> pickupPrefabs;
     // [SerializeField] private BossEnemy _boss;
     public int progress;
@@ -110,7 +111,7 @@ public class LevelManager : MonoBehaviour
     
     private IEnumerator AddRound(Round currentRound)
     {
-        _levelTimer = 8f;
+        _levelTimer = currentRound.duration;
         foreach (var wave in currentRound.waves)
         {
             StartCoroutine(AddWave(wave));
@@ -128,15 +129,15 @@ public class LevelManager : MonoBehaviour
         for (var i=0; i < wave.number; i++)
         {
             yield return new WaitForSeconds(2f / wave.number);
-            MakeEnemy(wave.enemy, wave.curve, wave.layer, wave.offset, i);
+            MakeEnemy(wave, i);
             yield return new WaitForSeconds(2f / wave.number);
         }
     }
 
-    private void MakeEnemy(int type, int curve, int layer, Vector2 offset, float delay)
+    private void MakeEnemy(Wave wave, float delay)
     {
-        var enemy = Instantiate(enemyPrefabs[type]);
-        enemy.OnSetMovement.Invoke(enemyLines[curve], offset, layer);
+        var enemy = Instantiate(enemyPrefabs[((int)wave.enemy)]);
+        enemy.OnSetMovement.Invoke(enemyLines[wave.curve], wave.offset, wave.layer, wave.speedMultiplier);
         enemy.SetDelay(delay);
         enemy.OnDeath.AddListener(SpawnPickup);
     }

@@ -6,13 +6,13 @@ using UnityEngine.U2D;
 
 public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
 {
-    private EnemyLine curve;
+    private EnemyLine _curve;
     private float _bezierTimer;
     private Vector2 _previousPoint;
     private Vector2 _offset;
-    private EnemyPoint boxPoint;
-    private float splineLength;
-    private bool hasBox;
+    private float _splineLength;
+    private bool _inBox;
+    private float _speedMultiplier = 1f;
     protected override void OnEnable()
     {
         ai.OnSetMovement.AddListener(SetMovement);
@@ -24,16 +24,16 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
         base.OnDisable();
     }
 
-    private void SetMovement(EnemyLine waveCurve, Vector2 waveOffset, int layer)
+    private void SetMovement(EnemyLine waveCurve, Vector2 waveOffset, int layer, float speedMultiplier)
     {
-        curve = waveCurve;
+        _curve = waveCurve;
         _offset = waveOffset;
-        gameObject.transform.position = curve.SpriteShape.spline.GetPoint(_bezierTimer);
-        splineLength = curve.SpriteShape.spline.CalculateTotalLength();
-        hasBox = waveCurve.EnemyBox != null;
-        if (hasBox)
+        gameObject.transform.position = _curve.SpriteShape.spline.GetPoint(_bezierTimer);
+        _splineLength = _curve.SpriteShape.spline.CalculateTotalLength();
+        _speedMultiplier = speedMultiplier;
+        if (waveCurve.EnemyBox != null)
         {
-            boxPoint = waveCurve.EnemyBox.PickPoint(layer);
+            ai.SetBoxPoint(waveCurve.EnemyBox.PickPoint(layer));
         }
     }
 
@@ -41,19 +41,27 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
     {
         if (_bezierTimer <= 1f)
         {
-            var spline = curve.SpriteShape.spline;
+            var spline = _curve.SpriteShape.spline;
             gameObject.transform.position = spline.GetPointX(_bezierTimer) + _offset;
-            _bezierTimer += Time.deltaTime * ai.GetStats().GetMovementSpeed() * 0.02f;
+            _bezierTimer += Time.deltaTime * ai.GetStats().GetMovementSpeed() * 0.02f * _speedMultiplier;
+        }
+        else if (ai.HasBox())
+        {
+            if (!_inBox)
+            {
+                _inBox = true;
+                ai.SetStopShooting(true);
+            }
+            _bezierTimer += Time.deltaTime;
+            gameObject.transform.position = Vector3.MoveTowards(transform.position, ai.GetBoxPoint().WorldPoint.position, ai.GetStats().GetMovementSpeed() * Time.deltaTime);
+        }
+        else if (_inBox)
+        {
+            gameObject.transform.Translate(Vector2.down*Time.deltaTime*ai.GetStats().GetMovementSpeed());
         }
         else
         {
-            if (hasBox)
-            {
-                _bezierTimer += Time.deltaTime;
-                gameObject.transform.position = Vector3.MoveTowards(transform.position, boxPoint.WorldPoint.position, ai.GetStats().GetMovementSpeed() * Time.deltaTime);
-            }
-            else
-                ai.Eliminate();
+            ai.Eliminate();
         }
     }
 }
