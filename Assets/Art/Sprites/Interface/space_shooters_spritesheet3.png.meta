@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d60e21237c82df746bb50981e6856dfb
+guid: 5712e04b72ff3c948803a508a868e50a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -117,43 +117,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Baron_0
+      name: space_shooters_spritesheet3_0
       rect:
         serializedVersion: 2
-        x: 348
-        y: 329
-        width: 1863
-        height: 904
+        x: 30
+        y: 145
+        width: 1342
+        height: 303
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9ec60877cc661b468c42c0d762ec122
-      internalID: -1021256974
+      spriteID: dde807fd7c95f1848ada77acdd62f7d7
+      internalID: 713360043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Baron_1
+      name: space_shooters_spritesheet3_1
       rect:
         serializedVersion: 2
-        x: 2878
-        y: 329
-        width: 1863
-        height: 904
+        x: 1420
+        y: 145
+        width: 1342
+        height: 303
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1492f2f1e5afd634bbc9f5cb3fe20b5e
-      internalID: -1354908369
+      spriteID: 3c699ee602cf88049a0c54cd7cb20021
+      internalID: 504934861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_shooters_spritesheet3_2
+      rect:
+        serializedVersion: 2
+        x: 2810
+        y: 145
+        width: 1341
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3f914933d5b9847b45b7479aaaccbf
+      internalID: -1737876638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_shooters_spritesheet3_3
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 145
+        width: 1342
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a212875a5ba7dc47bcb76380919a4d3
+      internalID: 741070203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_shooters_spritesheet3_4
+      rect:
+        serializedVersion: 2
+        x: 5580
+        y: 145
+        width: 1342
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0c1825d39aa4e4199b544dbbaa05c2
+      internalID: -458985095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_shooters_spritesheet3_5
+      rect:
+        serializedVersion: 2
+        x: 6990
+        y: 145
+        width: 1342
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f31ba239e01a4442a21edb7ee838d3e
+      internalID: 1554773071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_shooters_spritesheet3_6
+      rect:
+        serializedVersion: 2
+        x: 8370
+        y: 145
+        width: 1341
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524eda6c8fc576747b426d04b00e2f31
+      internalID: -584291007
       vertices: []
       indices: 
       edges: []
@@ -169,8 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Baron_1: -1354908369
-      Baron_0: -1021256974
+      space_shooters_spritesheet3_0: 713360043
+      space_shooters_spritesheet3_1: 504934861
+      space_shooters_spritesheet3_2: -1737876638
+      space_shooters_spritesheet3_3: 741070203
+      space_shooters_spritesheet3_4: -458985095
+      space_shooters_spritesheet3_5: 1554773071
+      space_shooters_spritesheet3_6: -584291007
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

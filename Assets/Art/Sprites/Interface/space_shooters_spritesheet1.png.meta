@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc9e59afce77c804b8cd03f25c74f740
+guid: fdf31f14b9428334295641dd992ca8aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gameover_scene_0
+      name: space_shooters_spritesheet1_0
       rect:
         serializedVersion: 2
-        x: 180
-        y: 269
-        width: 880
-        height: 273
+        x: 19
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c74b2aaa3e016664d90e8da0dadb05c2
-      internalID: -1891943093
+      spriteID: 84ec4fdac9696ba42a33f290ef25f3d1
+      internalID: 1935597488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_1
+      name: space_shooters_spritesheet1_1
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 269
-        width: 880
-        height: 273
+        x: 1409
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd54625411a7b5b498663a63294f5b46
-      internalID: 1141687327
+      spriteID: 2d38f98fe3cf6744cb63954604fd8b5e
+      internalID: -688381288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_2
+      name: space_shooters_spritesheet1_2
       rect:
         serializedVersion: 2
-        x: 2161
-        y: 269
-        width: 878
-        height: 273
+        x: 2819
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f596ea1e91f01d4595ac794cd47ac39
-      internalID: -551268031
+      spriteID: c175e3d0ab0dee942901615541c64d42
+      internalID: 1146013384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_3
+      name: space_shooters_spritesheet1_3
       rect:
         serializedVersion: 2
-        x: 3140
-        y: 269
-        width: 880
-        height: 273
+        x: 4209
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e52928dca2e6504aaeac785c274f8f0
-      internalID: -1081839642
+      spriteID: b77ab5d57ac026440bc4b91a45a3e592
+      internalID: 2013830844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_4
+      name: space_shooters_spritesheet1_4
       rect:
         serializedVersion: 2
-        x: 4120
-        y: 269
-        width: 880
-        height: 273
+        x: 5599
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af78f7843c0622a42b36c42e4ff36fb6
-      internalID: 744268855
+      spriteID: 864281336a528cd4181a1807790fe8c6
+      internalID: -923239748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_5
+      name: space_shooters_spritesheet1_5
       rect:
         serializedVersion: 2
-        x: 5110
-        y: 269
-        width: 880
-        height: 273
+        x: 7019
+        y: 148
+        width: 1342
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b9c83d1a5a6cc6419750d077436dfb4
-      internalID: -1879958010
+      spriteID: d2b71f4c186cef6428b8b0ae22ee875c
+      internalID: -51251968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gameover_scene_6
+      name: space_shooters_spritesheet1_6
       rect:
         serializedVersion: 2
-        x: 6101
-        y: 269
-        width: 879
-        height: 273
+        x: 8410
+        y: 148
+        width: 1340
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,50 +257,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61e9a11371f5b64898474c51bbfce44
-      internalID: 46757934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gameover_scene_7
-      rect:
-        serializedVersion: 2
-        x: 7110
-        y: 269
-        width: 880
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19c1d4e70fe02a04f90d4cd9a11d0ecc
-      internalID: -1609770684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gameover_scene_8
-      rect:
-        serializedVersion: 2
-        x: 8110
-        y: 269
-        width: 880
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35752e59b3d2c3f4eb208477590b38ac
-      internalID: -804246353
+      spriteID: a71d9c2c34570a240bac5f52d957be61
+      internalID: 340043572
       vertices: []
       indices: 
       edges: []
@@ -316,15 +274,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gameover_scene_0: -1891943093
-      gameover_scene_7: -1609770684
-      gameover_scene_3: -1081839642
-      gameover_scene_5: -1879958010
-      gameover_scene_6: 46757934
-      gameover_scene_2: -551268031
-      gameover_scene_4: 744268855
-      gameover_scene_1: 1141687327
-      gameover_scene_8: -804246353
+      space_shooters_spritesheet1_0: 1935597488
+      space_shooters_spritesheet1_1: -688381288
+      space_shooters_spritesheet1_2: 1146013384
+      space_shooters_spritesheet1_3: 2013830844
+      space_shooters_spritesheet1_4: -923239748
+      space_shooters_spritesheet1_5: -51251968
+      space_shooters_spritesheet1_6: 340043572
+      space_shooters_spritesheet1_7: 2049733163
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

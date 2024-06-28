@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 63cc70fa0d74b0b4aa90a0fffd681e81
+guid: b26239449bce66d49aed053c4978a6f7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Phase2Jester_0
+      name: Phase3Jester_0
       rect:
         serializedVersion: 2
-        x: 123
-        y: 148
-        width: 1485
-        height: 1255
+        x: 146
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63e622be994c1d04e9f2170caa333040
-      internalID: 1209251467
+      spriteID: b64c6210658e8414d9e4a1eec7cde246
+      internalID: -83126428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_1
+      name: Phase3Jester_1
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 148
-        width: 1485
-        height: 1255
+        x: 1684
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef72f6aec0ce3ae41af8f63d58d39cc2
-      internalID: -223822494
+      spriteID: 87f2474ef797bb246b615bffe1d6978e
+      internalID: -409790409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_2
+      name: Phase3Jester_2
       rect:
         serializedVersion: 2
-        x: 3351
-        y: 148
-        width: 1498
-        height: 1255
+        x: 3276
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9e006cdb561a6c4891637cc9f38591d
-      internalID: -99924471
+      spriteID: 77e8bf9659d455c49be1dd8478478c64
+      internalID: -2138594252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_3
+      name: Phase3Jester_3
       rect:
         serializedVersion: 2
-        x: 4849
-        y: 148
-        width: 1531
-        height: 1255
+        x: 4913
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 077673ed6f5863f4b8d882a01a4212e7
-      internalID: 1620786016
+      spriteID: 99703eae155ebde4e9c8f51da9e2dd5c
+      internalID: -543151032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_4
+      name: Phase3Jester_4
       rect:
         serializedVersion: 2
-        x: 6426
-        y: 148
-        width: 1538
-        height: 1255
+        x: 6534
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92d0eacad5fc2fa4a993f174b32f6e4f
-      internalID: 1286770225
+      spriteID: 56bb27d2745d8a04884332c475e3adb4
+      internalID: -1572213063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_6
+      name: Phase3Jester_5
       rect:
         serializedVersion: 2
-        x: 7964
-        y: 148
-        width: 1567
-        height: 1255
+        x: 8124
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a49af1059ccb45429ab3ecab3f8830c
-      internalID: 771457906
+      spriteID: b8f254bf5f1aa2a47887631242bed9fc
+      internalID: -302823531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_8
+      name: Phase3Jester_7
       rect:
         serializedVersion: 2
-        x: 9558
-        y: 148
-        width: 1559
-        height: 1255
+        x: 9766
+        y: 254
+        width: 1541
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4b137fb08c18104da13e1f8ba0e8654
-      internalID: -1899117540
+      spriteID: 60320b8849980d54d8e5f9be90db347c
+      internalID: -1364797798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_10
+      name: Phase3Jester_9
       rect:
         serializedVersion: 2
-        x: 11159
-        y: 148
-        width: 1538
-        height: 1255
+        x: 11401
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1663845c53affe4abbc9abc1865885e
-      internalID: 290013141
+      spriteID: a5d873cc231c6cb479cf4a3f64035317
+      internalID: -183722867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phase2Jester_12
+      name: Phase3Jester_11
       rect:
         serializedVersion: 2
-        x: 12760
-        y: 148
-        width: 1517
-        height: 1255
+        x: 12968
+        y: 254
+        width: 1568
+        height: 1258
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,8 +299,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 573da8e37b230b747b584eb7697c3d4b
-      internalID: 1284968014
+      spriteID: e894c2c800b0fa04a991df6370fcd921
+      internalID: -1990849325
       vertices: []
       indices: 
       edges: []
@@ -316,19 +316,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Phase2Jester_5: 1368968973
-      Phase2Jester_8: -1899117540
-      Phase2Jester_10: 290013141
-      Phase2Jester_9: 836263028
-      Phase2Jester_11: 1627704378
-      Phase2Jester_12: 1284968014
-      Phase2Jester_7: 936555035
-      Phase2Jester_4: 1286770225
-      Phase2Jester_6: 771457906
-      Phase2Jester_0: 1209251467
-      Phase2Jester_3: 1620786016
-      Phase2Jester_1: -223822494
-      Phase2Jester_2: -99924471
+      Phase3Jester_0: -83126428
+      Phase3Jester_1: -409790409
+      Phase3Jester_10: -1973281595
+      Phase3Jester_11: -1990849325
+      Phase3Jester_2: -2138594252
+      Phase3Jester_3: -543151032
+      Phase3Jester_4: -1572213063
+      Phase3Jester_5: -302823531
+      Phase3Jester_6: -1167934562
+      Phase3Jester_7: -1364797798
+      Phase3Jester_8: -1468056086
+      Phase3Jester_9: -183722867
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

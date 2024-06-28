@@ -22,25 +22,27 @@ public class WeaponModifier
 
 public class BulletAngleModifier : WeaponModifier
 {
-
-    [SerializeField] float bulletAngle;
+    [SerializeField] int bulletsPerAngleChange = 1;
+    [SerializeField] float arrayAngle;
     public override ShotInfo Modify(ShotInfo input)
     {
-        var startingAngle = input.weaponStats.BulletAmount <= 1 ? 0 : -bulletAngle * input.weaponStats.BulletAmount / 2 + bulletAngle / 2;
-        input.rotationShift += startingAngle + input.bulletIndex * bulletAngle;
+        if (bulletsPerAngleChange == 0) return input;
+        var startingAngle = input.weaponStats.BulletAmount <= 1 ? 0 : -arrayAngle * (input.weaponStats.BulletAmount / bulletsPerAngleChange) / 2 + arrayAngle / 2;
+        input.rotationShift += startingAngle + input.bulletIndex / bulletsPerAngleChange * arrayAngle;
         return input;
     }
 }
 
-public class BulletArrayModifier : WeaponModifier
+public class BulletSeparationModifier : WeaponModifier
 {
-    [SerializeField] int bulletsPerArray;
-    [SerializeField] float arrayAngle;
+    [SerializeField] private int bulletsPerSeparation = 1;
+    [SerializeField] private Vector2 arrayOffset;
+
     public override ShotInfo Modify(ShotInfo input)
     {
-        if (bulletsPerArray == 0) return input;
-        var startingAngle = input.weaponStats.BulletAmount <= 1 ? 0 : -arrayAngle * (input.weaponStats.BulletAmount / bulletsPerArray)/2 + arrayAngle / 2;
-        input.rotationShift += startingAngle + input.bulletIndex/bulletsPerArray * arrayAngle;
+        if (bulletsPerSeparation == 0) return input;
+        var startingPosition = input.weaponStats.BulletAmount <= 1 ? Vector2.zero : -arrayOffset * (input.weaponStats.BulletAmount / bulletsPerSeparation) / 2 + arrayOffset / 2;
+        input.position += startingPosition + input.bulletIndex / bulletsPerSeparation * arrayOffset;
         return input;
     }
 }
@@ -97,17 +99,38 @@ public class BulletTiltModifier : WeaponModifier
 
     public override ShotInfo Modify(ShotInfo input)
     {
-        var calculatedTime = input.bulletTime;
+        var calculatedTime = (float)input.bulletTime;
         if (maxTime > 0)
         {
-            var sign = input.bulletTime % (maxTime*2) > input.bulletTime % maxTime ? -1 : 1;
-            calculatedTime = input.bulletTime % maxTime;
-            calculatedTime = sign*maxTime/2 -sign*calculatedTime;
+            float a = (calculatedTime - maxTime) / (2f * maxTime);
+            float b = a - Mathf.Floor(a + 0.5f);
+            calculatedTime = (2f * maxTime * Mathf.Abs(b) - maxTime/2f);
         }
-        input.rotationShift += calculatedTime * BulletTilt;
+        input.rotationShift += calculatedTime * bulletTilt;
         return input;
     }
 }
+
+public class BulletPositionAlternatorModifier : WeaponModifier
+{
+    [SerializeField] private Vector2 alternateOffset;
+    [SerializeField] private int maxTime;
+    public Vector2 AlternateOffset { get => alternateOffset; set => alternateOffset = value; }
+
+    public override ShotInfo Modify(ShotInfo input)
+    {
+        var calculatedTime = (float)input.bulletTime;
+        if (maxTime > 0)
+        {
+            float a = (calculatedTime - maxTime) / (2f * maxTime);
+            float b = a - Mathf.Floor(a + 0.5f);
+            calculatedTime = (2f * maxTime * Mathf.Abs(b) - maxTime / 2f);
+        }
+        input.position += new Vector2(alternateOffset.x * (calculatedTime / maxTime), alternateOffset.y * (calculatedTime / maxTime));
+        return input;
+    }
+}
+
 
 public class BulletSpeedModifier : WeaponModifier
 {

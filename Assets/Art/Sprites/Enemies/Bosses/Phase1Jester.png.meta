@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc1d4c8e2b8c355469d935885bff4a30
+guid: 5f15b15ed3e51cf47bdb1bbca0321a86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 8192
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_0
+      name: Phase1Jester_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 148
-        width: 1342
-        height: 304
+        x: 68
+        y: 0
+        width: 1487
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,41 +131,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3308f5a80f78b1e42a699f0f2fb5969b
-      internalID: 2044722871
+      spriteID: e419bc45d5131d94da47de1d74a55a30
+      internalID: 361940189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_1
+      name: Phase1Jester_1
       rect:
         serializedVersion: 2
-        x: 1425
-        y: 148
-        width: 1342
-        height: 304
-      alignment: 0
+        x: 1586
+        y: 0
+        width: 1484
+        height: 1262
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b4b23117c4db149ad611d3c0a030b9
-      internalID: -102696193
+      spriteID: 2faa3726e8caae64d8c647541a8321ac
+      internalID: -1712394492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_2
+      name: Phase1Jester_2
       rect:
         serializedVersion: 2
-        x: 2825
-        y: 148
-        width: 1342
-        height: 304
+        x: 3127
+        y: 0
+        width: 1487
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f20a46ae5c37e3429652fa02d3482c9
-      internalID: 1779790313
+      spriteID: 71c9d4e02e76f20408d07bf56d2ceddd
+      internalID: 41746023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_3
+      name: Phase1Jester_3
       rect:
         serializedVersion: 2
-        x: 4205
-        y: 148
-        width: 1342
-        height: 304
+        x: 4663
+        y: 0
+        width: 1488
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 292886c3239f1004eac27b9713dfb08e
-      internalID: 161845743
+      spriteID: 7ab94324e2f22274f8f29ee23466abb1
+      internalID: -757916411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_4
+      name: Phase1Jester_4
       rect:
         serializedVersion: 2
-        x: 5585
-        y: 148
-        width: 1342
-        height: 304
+        x: 6201
+        y: 0
+        width: 1485
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e954fdff53c6dd4595209885ee89c46
-      internalID: -1928386452
+      spriteID: 7b5256e889beb814a8650c74c2a6937e
+      internalID: 407100853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_5
+      name: Phase1Jester_5
       rect:
         serializedVersion: 2
-        x: 6985
-        y: 148
-        width: 1342
-        height: 304
+        x: 7754
+        y: 0
+        width: 1487
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34198652029b9b342a4590f64968989f
-      internalID: 1063869425
+      spriteID: 37d437ee426165644a7798eba716259d
+      internalID: 1708021165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: space_shooters_spritesheet2_6
+      name: Phase1Jester_6
       rect:
         serializedVersion: 2
-        x: 8375
-        y: 148
-        width: 1342
-        height: 304
+        x: 9278
+        y: 0
+        width: 1486
+        height: 1262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +257,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea68142de9756fb49b324de352f08ce1
-      internalID: 515419512
+      spriteID: f4f1b7348c6dba247b81440705a0ed52
+      internalID: -1727789624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phase1Jester_7
+      rect:
+        serializedVersion: 2
+        x: 10838
+        y: 0
+        width: 1488
+        height: 1262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83d2493e9e89814db8df03e0864ce2d
+      internalID: -1744720898
       vertices: []
       indices: 
       edges: []
@@ -274,13 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      space_shooters_spritesheet2_1: -102696193
-      space_shooters_spritesheet2_6: 515419512
-      space_shooters_spritesheet2_4: -1928386452
-      space_shooters_spritesheet2_0: 2044722871
-      space_shooters_spritesheet2_3: 161845743
-      space_shooters_spritesheet2_2: 1779790313
-      space_shooters_spritesheet2_5: 1063869425
+      Phase1Jester_0: 361940189
+      Phase1Jester_1: -1712394492
+      Phase1Jester_2: 41746023
+      Phase1Jester_3: -757916411
+      Phase1Jester_4: 407100853
+      Phase1Jester_5: 1708021165
+      Phase1Jester_6: -1727789624
+      Phase1Jester_7: -1744720898
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d481c61e1ee5b54fa08e48f4cc773af
+guid: d3f3b0fef06bf75418b3f0b7ffdfe431
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 70
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -101,80 +101,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monarch_0
+      name: baron_0
       rect:
         serializedVersion: 2
-        x: 278
-        y: 633
-        width: 3566
-        height: 1701
-      alignment: 9
-      pivot: {x: 0.50220984, y: 0.651038}
+        x: 6
+        y: 98
+        width: 186
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 205d0c7e70a9f584a8d2cc583a2bf9fc
-      internalID: -745158668
+      spriteID: b496f70a05c69894ab135774089497b4
+      internalID: -1020825707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monarch_1
+      name: baron_1
       rect:
         serializedVersion: 2
-        x: 4448
-        y: 633
-        width: 3428
-        height: 1701
-      alignment: 9
-      pivot: {x: 0.5087411, y: 0.65169245}
+        x: 6
+        y: 7
+        width: 186
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69bb286c316e906459d776704b9a1f90
-      internalID: 69011128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monarch_2
-      rect:
-        serializedVersion: 2
-        x: 8673
-        y: 633
-        width: 3252
-        height: 1701
-      alignment: 9
-      pivot: {x: 0.5031501, y: 0.6510735}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1462cc4f246135f4eaed959f483f4ce7
-      internalID: 1400741773
+      spriteID: bfaba4013825f7542a89500681ec5f80
+      internalID: 5242190
       vertices: []
       indices: 
       edges: []
@@ -190,9 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monarch_1: 69011128
-      Monarch_2: 1400741773
-      Monarch_0: -745158668
+      baron_0: -1020825707
+      baron_1: 5242190
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

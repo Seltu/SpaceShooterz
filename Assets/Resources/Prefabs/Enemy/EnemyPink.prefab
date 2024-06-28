@@ -64,6 +64,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479944].arrayAngle
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: managedReferences[7277904216713330691].bulletTilt
       value: 10
       objectReference: {fileID: 0}
@@ -74,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: managedReferences[7277904369431609344].bulletAngle
       value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 673142075, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
+      propertyPath: managedReferences[7277904052045479944].bulletsPerAngleChange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7689281888666319298, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_Enabled
