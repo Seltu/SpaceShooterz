@@ -303,7 +303,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -692,7 +692,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801127527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.28, y: -5, z: 0}
+  m_LocalPosition: {x: -23, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1907,7 +1907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029894002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.28, y: -5, z: 0}
+  m_LocalPosition: {x: 23, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2580,7 +2580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: rounds.Array.data[6].waves.Array.data[0].offset.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173107, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: rounds.Array.data[7].waves.Array.data[0].offset.y
@@ -2664,7 +2664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1265149085781173116, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7bcb1c0d7b77e4a9db68526b8fe3a0, type: 3}
@@ -2768,7 +2768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: modifiers.list.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4230255008431317122, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
       propertyPath: modifiers.list.Array.data[0]
@@ -3004,7 +3004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7689281887112135868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3022,6 +3022,7 @@ MonoBehaviour:
   damage: 1
   movementSpeed: 4
   bulletPool: {fileID: 1946425455411847117}
+  ai: {fileID: 0}
 --- !u!212 &7689281887112135870
 SpriteRenderer:
   m_ObjectHideFlags: 0

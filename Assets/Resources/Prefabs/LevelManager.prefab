@@ -49,66 +49,157 @@ MonoBehaviour:
     - enemy: 0
       number: 6
       curve: 1
+      layer: 1
+      speedMultiplier: 0.4
       offset: {x: 0, y: 0}
     - enemy: 0
       number: 6
       curve: 2
+      layer: 1
+      speedMultiplier: 0.4
       offset: {x: 0, y: 0}
+    duration: 8
+  - waves:
+    - enemy: 0
+      number: 10
+      curve: 8
+      layer: 1
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    - enemy: 0
+      number: 10
+      curve: 9
+      layer: 1
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    duration: 10
+  - waves:
+    - enemy: 0
+      number: 6
+      curve: 1
+      layer: 1
+      speedMultiplier: 0.4
+      offset: {x: 0, y: 0}
+    - enemy: 0
+      number: 6
+      curve: 2
+      layer: 1
+      speedMultiplier: 0.4
+      offset: {x: 0, y: 0}
+    duration: 8
   - waves:
     - enemy: 0
       number: 6
       curve: 5
+      layer: 0
+      speedMultiplier: 1
       offset: {x: 0, y: 0}
-    - enemy: 1
-      number: 2
-      curve: 6
-      offset: {x: 0, y: 0}
-    - enemy: 1
-      number: 2
-      curve: 7
-      offset: {x: 0, y: 0}
-  - waves:
     - enemy: 2
       number: 6
-      curve: 5
-      offset: {x: 0, y: 0}
-    - enemy: 6
-      number: 5
-      curve: 6
-      offset: {x: 0, y: 0}
-    - enemy: 6
-      number: 5
-      curve: 7
-      offset: {x: 0, y: 0}
-  - waves:
-    - enemy: 2
-      number: 6
-      curve: 5
+      curve: 10
+      layer: 0
+      speedMultiplier: 1
       offset: {x: 0, y: 2}
+    - enemy: 1
+      number: 2
+      curve: 6
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 2}
+    - enemy: 1
+      number: 2
+      curve: 7
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 2}
+    duration: 8
   - waves:
     - enemy: 0
-      number: 6
-      curve: 5
+      number: 10
+      curve: 8
+      layer: 1
+      speedMultiplier: 1
       offset: {x: 0, y: 0}
-    - enemy: 2
-      number: 6
-      curve: 0
+    - enemy: 0
+      number: 10
+      curve: 9
+      layer: 1
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    duration: 10
+  - waves:
+    - enemy: 0
+      number: 4
+      curve: 1
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    - enemy: 0
+      number: 4
+      curve: 2
+      layer: 0
+      speedMultiplier: 1
       offset: {x: 0, y: 2}
     - enemy: 1
       number: 2
-      curve: 6
+      curve: 8
+      layer: 2
+      speedMultiplier: 1
       offset: {x: 0, y: 0}
     - enemy: 1
       number: 2
-      curve: 7
+      curve: 9
+      layer: 2
+      speedMultiplier: 1
       offset: {x: 0, y: 0}
-  players: []
-  enemyLines: []
+    duration: 8
+  - waves:
+    - enemy: 2
+      number: 6
+      curve: 5
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: -2}
+    - enemy: 1
+      number: 5
+      curve: 6
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 2}
+    - enemy: 1
+      number: 5
+      curve: 7
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    duration: 8
+  - waves:
+    - enemy: 2
+      number: 6
+      curve: 5
+      layer: 0
+      speedMultiplier: 1
+      offset: {x: 0, y: 0}
+    duration: 8
+  players:
+  - {fileID: 0}
+  enemyLines:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enemyPrefabs:
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
-  - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
-  - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
-  - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
+  - {fileID: 7776567081768597181, guid: d7b9a97ebda5c4144a7d4474b66960b9, type: 3}
+  - {fileID: 5540064452426300581, guid: b6de553dadcf87e48972bbbe9a714094, type: 3}
+  - {fileID: 3903479507038855211, guid: a8245187e402f9b458df56a695262251, type: 3}
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}

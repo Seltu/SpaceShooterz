@@ -24,7 +24,7 @@ public class BasicStats : MonoBehaviour
         CurrentHp = maxHp;
     }
 
-    private void CheckHit(Transform hit, Bullet bullet)
+    protected void CheckHit(Transform hit, Bullet bullet)
     {
         if(!transform.Equals(hit)) return;
         if(bullet.GetShipStats().team == team) return;
@@ -37,7 +37,7 @@ public class BasicStats : MonoBehaviour
         TakeDamage(bullet.GetShipStats().GetDamage());
     }
 
-    protected bool TakeDamage(float damage)
+    protected virtual bool TakeDamage(float damage)
     {
         CurrentHp-=damage;
         if (CurrentHp < 0)

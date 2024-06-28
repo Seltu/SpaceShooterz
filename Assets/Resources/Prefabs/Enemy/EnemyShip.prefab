@@ -178,6 +178,7 @@ MonoBehaviour:
   damage: 1
   movementSpeed: 4
   bulletPool: {fileID: 1946425456148292284}
+  ai: {fileID: 4455976589124030296}
 --- !u!114 &7689281888666319298
 MonoBehaviour:
   m_ObjectHideFlags: 0

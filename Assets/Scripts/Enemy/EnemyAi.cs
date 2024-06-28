@@ -43,13 +43,14 @@ public class EnemyAi : MonoBehaviour
 
     internal void Eliminate()
     {
-        gameObject.SetActive(false);
         if(_boxPoint != null)
         {
+            Shoot();
             _boxPoint.onRelease -= ReleaseBoxPoint;
             _boxPoint.Taken = false;
             _boxPoint = null;
         }
+        gameObject.SetActive(false);
     }
 
     public void SetDelay(float delay)
