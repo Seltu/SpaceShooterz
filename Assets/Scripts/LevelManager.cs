@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.U2D;
@@ -30,13 +31,19 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private LevelInfoSO infoSO;
     
     // [SerializeField] private List<Pickup> pickupPrefabs;
-    // [SerializeField] private BossEnemy _boss;
-    public int progress;
-    private float _levelTimer = 1;
-    private bool _bossFight;
-    private bool _makeBoss;
+    [SerializeField] private BossEnemyAi boss;
 
     // public MusicController audioController;
+
+    private void OnEnable()
+    {
+        GameEventsManager.summonRound += o => AddRound(o);
+    }
+
+    private void OnDisable()
+    {
+        
+    }
 
     private void Start()
     {
@@ -48,79 +55,29 @@ public class LevelManager : MonoBehaviour
             player.OnDeath.AddListener(PlayerDied);
             players.Remove(player);
         }
-    }
-
-    private void Update() {
-        if (_levelTimer > 0) {
-            _levelTimer-=Time.deltaTime;
-            return;
-        }
-        if (_bossFight) {
-            /*if (level == 0 && !bossChannel.isPlaying) {
-                bossChannel.clip = vsBaronMusic;
-                bossChannel.Play();
-            }
-            if (level == 1 && !bossChannel.isPlaying) {
-                bossChannel.clip = vsJesterMusic;
-                bossChannel.Play();
-            }
-            if (level == 2 && !bossChannel.isPlaying) {
-                bossChannel.clip = vsMonarchMusic;
-                bossChannel.Play();
-            }
-            */
-            /*
-            if (_boss.summon) {
-                StartCoroutine(AddRound(_boss.CreateWaves()));
-            }
-            return;
-            */
-        }
-        /*if (level > 2) {
-            done = true;
-            next_state = "WIN";
-            gameLevel = 0;
-            on_boss = false;
-            return;
-        }*/
-        if (progress >= rounds.Count) {
-            /*
-            if (_makeBoss)
-            {
-                _boss = Instantiate(levels[level].boss);
-                _boss.onDefeat.AddListener(NextLevel);
-                _bossFight = true;
-            }
-            else
-            {
-                _levelTimer = 8f;
-                audioController.PlayWarning();
-            }
-            _makeBoss = true;
-            */
-            return;
-        }
-        var currentRound = rounds[progress];
-        StartCoroutine(AddRound(currentRound));
+        StartCoroutine(AddRounds());
     }
 
     private void NextLevel()
     {
         SceneManager.LoadScene(nextLevel);
     }
-    
-    private IEnumerator AddRound(Round currentRound)
+
+    private IEnumerator AddRounds()
     {
-        _levelTimer = currentRound.duration;
-        foreach (var wave in currentRound.waves)
+        foreach (var round in rounds)
+        {
+            AddRound(round);
+            yield return new WaitForSeconds(round.duration);
+        }
+        Instantiate(boss);
+    }
+
+    private void AddRound(Round round)
+    {
+        foreach (var wave in round.waves)
         {
             StartCoroutine(AddWave(wave));
-        }
-        yield return new WaitForSeconds(8f);
-        progress += 1;
-        if (_bossFight)
-        {
-            //_boss.summon = false;
         }
     }
 

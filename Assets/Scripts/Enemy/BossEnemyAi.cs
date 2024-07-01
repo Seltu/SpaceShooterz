@@ -8,7 +8,6 @@ public class BossEnemyAi : EnemyAi
     [SerializeField] private Transform shootPointsParent;
     protected int _bossStep = 0;
     private float _bossTimer = 1;
-    private bool _summon = true;
     protected override void Update()
     {
         if (_bossTimer > 0)
@@ -32,7 +31,8 @@ public class BossEnemyAi : EnemyAi
     }
     protected virtual void OnStep()
     {
-        _summon = true;
+        if (bossSteps[_bossStep].stepSummons != null)
+            GameEventsManager.SummonRoundTrigger(bossSteps[_bossStep].stepSummons);
         foreach(Transform shootPoint in shootPointsParent)
         {
             shootPoint.gameObject.SetActive(false);
@@ -41,10 +41,5 @@ public class BossEnemyAi : EnemyAi
         {
             shootPoint.SetActive(true);
         }
-    }
-
-    public Round GetSummons()
-    {
-        return bossSteps[_bossStep].stepSummons;
     }
 }

@@ -206,4 +206,5 @@ MonoBehaviour:
   - {fileID: 3261911003997260800, guid: 35f00e89d5efdaa46816270149778fc3, type: 3}
   nextLevel: 
   infoSO: {fileID: 11400000, guid: bc0b9185e8f06d84da9aac2f3d6b4d02, type: 2}
+  boss: {fileID: 1462804188017184245, guid: c5576de6f7a8f0a4c9ad0e05ef08fd4f, type: 3}
   progress: 0

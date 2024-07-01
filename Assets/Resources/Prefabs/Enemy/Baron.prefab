@@ -73,7 +73,7 @@ MonoBehaviour:
     - rid: 7277904016805462022
       type: {class: BulletRandomSizeModifier, ns: , asm: Assembly-CSharp}
       data:
-        randomSize: {x: 9, y: 0}
+        randomSize: {x: 10, y: 0}
     - rid: 7277904216713330690
       type: {class: BulletSpeedModifier, ns: , asm: Assembly-CSharp}
       data:
@@ -253,7 +253,7 @@ MonoBehaviour:
   team: 1
   maxHp: 4000
   damage: 1
-  movementSpeed: 4
+  movementSpeed: 5
   bulletPool: {fileID: 7348232094268790521}
   ai: {fileID: 1462804188017184245}
 --- !u!114 &7348232094268790521
@@ -293,31 +293,67 @@ MonoBehaviour:
     stepSummons:
       waves: []
       duration: 0
-    stepDuration: 5
+    stepDuration: 15
   - stepShooters:
     - {fileID: 9149411787817804143}
     stepSummons:
-      waves: []
+      waves:
+      - enemy: 2
+        number: 4
+        curve: 3
+        layer: 0
+        speedMultiplier: 0.45
+        offset: {x: 0, y: 0}
+      - enemy: 2
+        number: 4
+        curve: 4
+        layer: 0
+        speedMultiplier: 0.45
+        offset: {x: 0, y: 0}
       duration: 0
-    stepDuration: 5
+    stepDuration: 15
   - stepShooters:
     - {fileID: 9149411787952039545}
     stepSummons:
-      waves: []
-      duration: 10
-    stepDuration: 5
+      waves:
+      - enemy: 0
+        number: 5
+        curve: 6
+        layer: 0
+        speedMultiplier: 1
+        offset: {x: 0, y: 0}
+      - enemy: 0
+        number: 5
+        curve: 7
+        layer: 0
+        speedMultiplier: 1
+        offset: {x: 0, y: 0}
+      duration: 0
+    stepDuration: 15
   - stepShooters:
     - {fileID: 9149411788099920480}
     stepSummons:
-      waves: []
-      duration: 5
-    stepDuration: 5
+      waves:
+      - enemy: 0
+        number: 5
+        curve: 6
+        layer: 0
+        speedMultiplier: 1
+        offset: {x: 0, y: 0}
+      - enemy: 0
+        number: 5
+        curve: 7
+        layer: 0
+        speedMultiplier: 1
+        offset: {x: 0, y: 0}
+      duration: 0
+    stepDuration: 15
   - stepShooters:
     - {fileID: 9149411789045260352}
     stepSummons:
       waves: []
-      duration: 10
-    stepDuration: 5
+      duration: 5
+    stepDuration: 15
   shootPointsParent: {fileID: 9149411788896714443}
 --- !u!114 &1462804188017184244
 MonoBehaviour:
@@ -501,8 +537,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1462804188017184136}
   bulletAmount: 6
-  fireRate: 8
-  projectileSpeed: 7
+  fireRate: 2
+  projectileSpeed: 6
   modifiers:
     list: []
   references:
@@ -630,7 +666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9149411788388003170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.8, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -698,7 +734,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9149411788686810854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
