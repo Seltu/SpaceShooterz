@@ -6,19 +6,21 @@ public class BasicStats : MonoBehaviour
     // Entidades da mesma equipe não se machucam
     [SerializeField] protected internal int team;
     [SerializeField] private float maxHp;
+    [SerializeField] protected GameEventListener<CustomEvent<object, Bullet>> bulletHitEvent;
+    [SerializeField] private GameEvent removeBulletEvent;
     private static int lastId;
     private int id;
     protected float CurrentHp;
 
     private void OnEnable()
     {
-        GameEventsManager.bulletHit += CheckHit;
+        bulletHitEvent.AddListener<object, Bullet>(CheckHit);
         ResetStats();
     }
 
     private void OnDisable()
     {
-        GameEventsManager.bulletHit -= CheckHit;
+        bulletHitEvent.RemoveListener<object, Bullet>(CheckHit);
     }
 
     protected virtual void ResetStats()
@@ -27,12 +29,12 @@ public class BasicStats : MonoBehaviour
         CurrentHp = maxHp;
     }
 
-    protected void CheckHit(Transform hit, Bullet bullet)
+    protected void CheckHit(object hit, Bullet bullet)
     {
-        if(!transform.Equals(hit)) return;
+        if (!((object)transform == hit)) return;
         if(bullet.GetShipStats().team == team) return;
         TakeHit(bullet);
-        GameEventsManager.RemoveBulletTrigger(bullet);
+        removeBulletEvent.Raise(bullet);
     }
 
     protected virtual void TakeHit(Bullet bullet)
@@ -46,7 +48,6 @@ public class BasicStats : MonoBehaviour
         if (CurrentHp < 0)
         {
             // Futuramente usar entity pooling para o desligamento de entidades
-            GameEventsManager.bulletHit -= CheckHit;
             gameObject.SetActive(false);
             return true;
         }

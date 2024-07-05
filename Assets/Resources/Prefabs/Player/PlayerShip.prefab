@@ -197,9 +197,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   maxHp: 1
+  bulletHitEvent:
+    event: {fileID: 11400000, guid: 42ecbba2ff215884e86ff80f753ed3ce, type: 2}
+  removeBulletEvent: {fileID: 11400000, guid: 44bbcd4fbb402264cad656e5d53528c8, type: 2}
   damage: 10
   movementSpeed: 11
   invincibilityTime: 0
+  playerDeathEvent: {fileID: 11400000, guid: 5635873d077491e42a3f54b96230e7dc, type: 2}
 --- !u!114 &2593313092045311395
 MonoBehaviour:
   m_ObjectHideFlags: 0

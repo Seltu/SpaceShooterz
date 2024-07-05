@@ -64,6 +64,32 @@ public class GameEventListener<T> : GameEventListener where T : CustomEvent, new
         @event.UnRegisterListener(this);
     }
 
+    public void RemoveListener<U, V>(Action<U, V> method)
+    {
+        if (customEvent == null)
+        {
+            customEvent = new T();
+        }
+        if (customEvent is CustomEvent<U, V> cE)
+        {
+            cE.response.RemoveListener(new UnityAction<U, V>(method));
+        }
+        @event.UnRegisterListener(this);
+    }
+
+    public void RemoveListener<U, V, W>(Action<U, V, W> method)
+    {
+        if (customEvent == null)
+        {
+            customEvent = new T();
+        }
+        if (customEvent is CustomEvent<U, V, W> cE)
+        {
+            cE.response.RemoveListener(new UnityAction<U, V, W>(method));
+        }
+        @event.UnRegisterListener(this);
+    }
+
     public override void OnEventRaised(object[] parameters)
     {
         customEvent.Invoke(parameters);

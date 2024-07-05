@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerStats : ShipStats
 {
     [SerializeField] private float invincibilityTime;
+    [SerializeField] private GameEvent playerDeathEvent;
     private float _hpMultiplier = 1;
     private float _damageMultiplier = 1;
     private float _fireRateMultiplier = 1;
@@ -17,7 +18,7 @@ public class PlayerStats : ShipStats
     {
         var shooter = bullet.GetShipStats();
         if(TakeDamage(shooter.GetDamage()));
-            GameEventsManager.PlayerDeathTrigger(this, shooter);
+            playerDeathEvent.Raise(this, shooter);
     }
     
 }

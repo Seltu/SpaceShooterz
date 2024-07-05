@@ -5,19 +5,20 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D body;
     [SerializeField] private float castRadius;
+    [SerializeField] private GameEventListener<CustomEvent<object>> removeBullet;
+    [SerializeField] private GameEvent bulletHit;
     private ShipStats _shipStats;
     private Transform _lastObjectHit;
     private bool _collided;
 
-    private void OnEnable()
+    private void Start()
     {
-        GameEventsManager.removeBullet += DestroyBullet;
-        _lastObjectHit = null;
+        removeBullet.AddListener<object>(DestroyBullet);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
-        GameEventsManager.removeBullet -= DestroyBullet;
+        removeBullet.RemoveListener<object>(DestroyBullet);
     }
 
     private void OnBecameInvisible()
@@ -25,9 +26,10 @@ public class Bullet : MonoBehaviour
         DestroyBullet(this);
     }
 
-    private void DestroyBullet(Bullet bullet)
+    private void DestroyBullet(object bullet)
     {
-        if(bullet != this) return;
+        if(bullet != (object)this) return;
+        _lastObjectHit = null;
         gameObject.SetActive(false);
     }
 
@@ -42,7 +44,7 @@ public class Bullet : MonoBehaviour
         if(_collided&&hit.transform.Equals(_lastObjectHit)) return;
         _collided = true;
         _lastObjectHit = hit.transform;
-        GameEventsManager.BulletHitTrigger(hit.transform, this);
+        bulletHit.Raise(hit.transform, this);
     }
 
     public void SetDirection(Vector2 direction)

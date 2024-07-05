@@ -11,7 +11,7 @@ public class EnemyStats : ShipStats
         if (CurrentHp < 0)
         {
             // Futuramente usar entity pooling para o desligamento de entidades
-            GameEventsManager.bulletHit -= CheckHit;
+            bulletHitEvent.AddListener<object, Bullet>(CheckHit);
             ai.Eliminate();
             return true;
         }

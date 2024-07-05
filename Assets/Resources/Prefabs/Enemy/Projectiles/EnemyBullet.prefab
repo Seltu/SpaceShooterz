@@ -122,6 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 3180290100915000448}
   castRadius: 0.1
+  removeBullet:
+    event: {fileID: 11400000, guid: 44bbcd4fbb402264cad656e5d53528c8, type: 2}
+  bulletHit: {fileID: 11400000, guid: 42ecbba2ff215884e86ff80f753ed3ce, type: 2}
 --- !u!95 &6456685774093516058
 Animator:
   serializedVersion: 5
