@@ -32,7 +32,7 @@ public class BossEnemyAi : EnemyAi
     protected virtual void OnStep()
     {
         if (bossSteps[_bossStep].stepSummons != null)
-            GameEventsManager.SummonRoundTrigger(bossSteps[_bossStep].stepSummons);
+            //GameEventsManager.SummonRoundTrigger(bossSteps[_bossStep].stepSummons);
         foreach(Transform shootPoint in shootPointsParent)
         {
             shootPoint.gameObject.SetActive(false);

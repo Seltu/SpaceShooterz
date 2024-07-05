@@ -9,6 +9,7 @@ public class EnemyAi : MonoBehaviour
     [HideInInspector] public UnityEvent OnMove;
     [HideInInspector] public UnityEvent<Vector2> OnDeath;
     [SerializeField] private EnemyStats enemyStats;
+    [SerializeField] private GameEvent shootEvent;
     private EnemyPoint _boxPoint;
     private bool _delay;
     private bool _hasBox;
@@ -23,7 +24,7 @@ public class EnemyAi : MonoBehaviour
 
     private void Shoot()
     {
-        GameEventsManager.ShootBulletTrigger(gameObject);
+        shootEvent.Raise(gameObject);
     }
 
     public EnemyStats GetStats()
@@ -49,6 +50,7 @@ public class EnemyAi : MonoBehaviour
             _boxPoint.onRelease -= ReleaseBoxPoint;
             _boxPoint.Taken = false;
             _boxPoint = null;
+            _hasBox = false;
         }
         gameObject.SetActive(false);
     }

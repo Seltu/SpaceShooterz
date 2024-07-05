@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 7689281889180553864, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 1112529868039131926, guid: 9d0b9e91227e782499ad6c28bef6acf3, type: 3}
+      objectReference: {fileID: 6519897860436686911, guid: 9d0b9e91227e782499ad6c28bef6acf3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
 --- !u!1 &1981968108711125367 stripped

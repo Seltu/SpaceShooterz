@@ -3,18 +3,19 @@ using UnityEngine;
 public class BulletShooter : MonoBehaviour
 {
     [SerializeField] private WeaponStats _weaponStats;
-    [SerializeField] private Bullet bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameEventListener<CustomEvent<object>> shootBullet;
     private float _cooldown;
     private int _bulletTime;
     
     private void OnEnable()
     {
-        GameEventsManager.shootBullet += ShootPattern;
+        shootBullet.AddListener<object>(ShootPattern);
     }
 
     private void OnDisable()
     {
-        GameEventsManager.shootBullet -= ShootPattern;
+        shootBullet.RemoveListener<object>(ShootPattern);
     }
 
     private void Update()
@@ -23,9 +24,9 @@ public class BulletShooter : MonoBehaviour
             _cooldown -= Time.deltaTime;
     }
 
-    private void ShootPattern(GameObject ship)
+    private void ShootPattern(object ship)
     {
-        if(ship != _weaponStats.Ship.gameObject) return;
+        if(!ship.Equals(_weaponStats.Ship.gameObject)) return;
         if(_cooldown > 0) return;
         _cooldown = 1f / _weaponStats.FireRate;
         for (var i = 0; i < _weaponStats.BulletAmount; i++)
@@ -43,7 +44,8 @@ public class BulletShooter : MonoBehaviour
             shotInfo = modifier.Modify(shotInfo);
         }
         var rotation = transform.rotation * Quaternion.AngleAxis(shotInfo.rotationShift, Vector3.forward);
-        var bullet = _weaponStats.Ship.GetBulletPool().Create(bulletPrefab, shotInfo.position, rotation);
+        var bullet = (Bullet) PoolManager.Instance.ReuseComponent(bulletPrefab, shotInfo.position, rotation);
+        bullet.gameObject.SetActive(true);
         bullet.SetDirection(bullet.transform.up * _weaponStats.ProjectileSpeed + bullet.transform.TransformDirection(shotInfo.directionShift));
         bullet.SetShipStats(_weaponStats.Ship);
     }

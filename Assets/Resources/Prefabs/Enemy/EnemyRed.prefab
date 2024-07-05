@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 1194137659646105187}
-  bulletPrefab: {fileID: 81016492947955003, guid: 89f257dc283929149ab6c673a577ef4b, type: 3}
+  bulletPrefab: {fileID: 6058468051929019922, guid: 89f257dc283929149ab6c673a577ef4b, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!1001 &1194137658972963672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 7689281889180553864, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 81016492947955003, guid: 89f257dc283929149ab6c673a577ef4b, type: 3}
+      objectReference: {fileID: 6058468051929019922, guid: 89f257dc283929149ab6c673a577ef4b, type: 3}
     - target: {fileID: 7689281889180553865, guid: 29e36cea7ee24e641bda7c0e33b2ccb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5

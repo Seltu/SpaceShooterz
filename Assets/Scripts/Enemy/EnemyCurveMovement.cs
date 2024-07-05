@@ -8,9 +8,7 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
 {
     private EnemyLine _curve;
     private float _bezierTimer;
-    private Vector2 _previousPoint;
     private Vector2 _offset;
-    private float _splineLength;
     private bool _inBox;
     private float _speedMultiplier = 1f;
     protected override void OnEnable()
@@ -20,6 +18,8 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
     }
     protected override void OnDisable()
     {
+        _bezierTimer = 0;
+        _inBox = false;
         ai.OnSetMovement.RemoveListener(SetMovement);
         base.OnDisable();
     }
@@ -29,7 +29,6 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
         _curve = waveCurve;
         _offset = waveOffset;
         gameObject.transform.position = _curve.SpriteShape.spline.GetPoint(_bezierTimer);
-        _splineLength = _curve.SpriteShape.spline.CalculateTotalLength();
         _speedMultiplier = speedMultiplier;
         if (waveCurve.EnemyBox != null)
         {

@@ -6,4 +6,10 @@ using UnityEngine;
 public class LevelInfoSO : ScriptableObject
 {
     [SerializeField] public List<PlayerController> players;
+
+    public void Awake()
+    {
+        
+    }
+
 }

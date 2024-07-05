@@ -51,6 +51,7 @@ namespace BF_SubclassList
 
                 foreach (var type in derivedTypes)
                 {
+                    if(type.ContainsGenericParameters) continue;
                     menu.AddItem(new GUIContent(type.ToString()), false, clickHandler, Activator.CreateInstance(type));
                 }
                 menu.ShowAsContext();

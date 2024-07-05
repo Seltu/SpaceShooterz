@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 7689281888666319313}
   - component: {fileID: 7689281888666319319}
   - component: {fileID: 7689281888666319321}
+  - component: {fileID: 4455976589124030296}
   - component: {fileID: 7689281888666319309}
   - component: {fileID: 7689281888666319298}
-  - component: {fileID: 4455976589124030296}
-  - component: {fileID: 1946425456148292284}
   - component: {fileID: 673142075}
   m_Layer: 6
   m_Name: EnemyShip
@@ -161,37 +160,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
---- !u!114 &7689281888666319309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7689281888666319304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a97378e2a9428947ae4a4e81e30cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHp: 20
-  damage: 1
-  movementSpeed: 4
-  bulletPool: {fileID: 1946425456148292284}
-  ai: {fileID: 4455976589124030296}
---- !u!114 &7689281888666319298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7689281888666319304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7a5345b46960b64da9879042586eade, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ai: {fileID: 4455976589124030296}
 --- !u!114 &4455976589124030296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,10 +179,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyStats: {fileID: 7689281888666319309}
+  shootEvent: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
   OnSetMovement:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1946425456148292284
+--- !u!114 &7689281888666319309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,9 +192,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7689281888666319304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72359378c5548f478cafaa1274f379e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a97378e2a9428947ae4a4e81e30cfd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 1
+  maxHp: 20
+  damage: 1
+  movementSpeed: 4
+  ai: {fileID: 4455976589124030296}
+--- !u!114 &7689281888666319298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689281888666319304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a5345b46960b64da9879042586eade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ai: {fileID: 4455976589124030296}
 --- !u!114 &673142075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,4 +279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 673142075}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 5749245303590563189, guid: 4b213ba96f0a3f74e8c668bd8a13c8b3, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}

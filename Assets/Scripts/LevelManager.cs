@@ -24,9 +24,8 @@ public class Round
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<Round> rounds;
-    [SerializeField] private List<PlayerController> players;
     [SerializeField] private List<EnemyLine> enemyLines;
-    [SerializeField] private List<CurveEnemyAi> enemyPrefabs;
+    [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] private string nextLevel;
     [SerializeField] private LevelInfoSO infoSO;
     
@@ -37,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEventsManager.summonRound += o => AddRound(o);
+        //GameEventsManager.summonRound += o => AddRound(o);
     }
 
     private void OnDisable()
@@ -48,12 +47,9 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         infoSO.players = new List<PlayerController>();
-        for (var index = 0; index < players.Count; index++)
+        foreach(PlayerController player in infoSO.players)
         {
-            var player = players[index];
-            infoSO.players.Add(player);
             player.OnDeath.AddListener(PlayerDied);
-            players.Remove(player);
         }
         StartCoroutine(AddRounds());
     }
@@ -93,7 +89,8 @@ public class LevelManager : MonoBehaviour
 
     private void MakeEnemy(Wave wave, float delay)
     {
-        var enemy = Instantiate(enemyPrefabs[((int)wave.enemy)]);
+        var enemy = (CurveEnemyAi) PoolManager.Instance.ReuseComponent(enemyPrefabs[(int)wave.enemy].gameObject, transform.position, Quaternion.identity);
+        enemy.gameObject.SetActive(true);
         enemy.OnSetMovement.Invoke(enemyLines[wave.curve], wave.offset, wave.layer, wave.speedMultiplier);
         enemy.SetDelay(delay);
         enemy.OnDeath.AddListener(SpawnPickup);
@@ -108,7 +105,7 @@ public class LevelManager : MonoBehaviour
 
     private void PlayerDied()
     {
-        if (players.Count <= 0)
+        if (infoSO.players.Count <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }

@@ -46,7 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 1462804187485611720}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &1462804187485611720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +94,6 @@ GameObject:
   - component: {fileID: 1462804188017184146}
   - component: {fileID: 1462804188017184156}
   - component: {fileID: 1462804188017184136}
-  - component: {fileID: 7348232094268790521}
   - component: {fileID: 1462804188017184245}
   - component: {fileID: 1462804188017184244}
   m_Layer: 6
@@ -158,7 +159,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1020825707, guid: d3f3b0fef06bf75418b3f0b7ffdfe431, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -254,20 +255,7 @@ MonoBehaviour:
   maxHp: 4000
   damage: 1
   movementSpeed: 5
-  bulletPool: {fileID: 7348232094268790521}
   ai: {fileID: 1462804188017184245}
---- !u!114 &7348232094268790521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462804188017184141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72359378c5548f478cafaa1274f379e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1462804188017184245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +275,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   enemyStats: {fileID: 1462804188017184136}
+  shootEvent: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
   bossSteps:
   - stepShooters:
     - {fileID: 9149411787911669453}
@@ -416,7 +405,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 9149411787539218449}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &9149411787539218449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 9149411787874906832}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &9149411787874906832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 9149411788388003180}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &9149411788388003180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +749,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 9149411788686810848}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &9149411788686810848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,7 +887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 9149411789103670598}
-  bulletPrefab: {fileID: -3574902177219250514, guid: c03749012f0822f4baf73e2b246c1f66, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &9149411789103670598
 MonoBehaviour:
   m_ObjectHideFlags: 0

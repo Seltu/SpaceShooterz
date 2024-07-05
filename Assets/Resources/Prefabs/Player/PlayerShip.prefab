@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponStats: {fileID: 5388356660029797298}
-  bulletPrefab: {fileID: -3574902177219250514, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  bulletPrefab: {fileID: 1975024025944399239, guid: e849149b658ff1b42a040e514ebb32f4, type: 3}
+  shootBullet:
+    event: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!1 &2593313092045311409
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +66,6 @@ GameObject:
   - component: {fileID: 2593313092045311405}
   - component: {fileID: 5388356660029797298}
   - component: {fileID: 2593313092045311392}
-  - component: {fileID: 4670821093117758234}
   m_Layer: 7
   m_Name: PlayerShip
   m_TagString: Player
@@ -128,7 +129,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 616517413, guid: 0f6e9151b5431404bb5aa65972e6e2f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -195,10 +196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHp: 20
-  damage: 5
-  movementSpeed: 7
-  bulletPool: {fileID: 4670821093117758234}
+  maxHp: 1
+  damage: 10
+  movementSpeed: 11
   invincibilityTime: 0
 --- !u!114 &2593313092045311395
 MonoBehaviour:
@@ -222,6 +222,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   playerStats: {fileID: 2593313092045311404}
+  levelInfoSO: {fileID: 11400000, guid: bc0b9185e8f06d84da9aac2f3d6b4d02, type: 2}
+  shootEvent: {fileID: 11400000, guid: dddfbc236d855e448a42972fe590c468, type: 2}
 --- !u!114 &2593313092045311394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,15 +298,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &4670821093117758234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2593313092045311409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72359378c5548f478cafaa1274f379e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
