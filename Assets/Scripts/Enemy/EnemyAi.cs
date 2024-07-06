@@ -11,12 +11,15 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private EnemyStats enemyStats;
     [SerializeField] private GameEvent shootEvent;
     private EnemyPoint _boxPoint;
+    private float _cooldown;
     private bool _delay;
     private bool _hasBox;
     private bool _stopShooting;
     protected virtual void Update()
     {
         OnMove.Invoke();
+        if (_cooldown > 0)
+            _cooldown -= Time.deltaTime;
         if (_stopShooting) return;
         if (_delay) return;
         Shoot();
@@ -24,6 +27,8 @@ public class EnemyAi : MonoBehaviour
 
     private void Shoot()
     {
+        if (_cooldown > 0) return;
+        _cooldown = 1f / enemyStats.GetWeapon().FireRate;
         shootEvent.Raise(gameObject);
     }
 
@@ -52,6 +57,7 @@ public class EnemyAi : MonoBehaviour
             _boxPoint = null;
             _hasBox = false;
         }
+        _cooldown = 0;
         gameObject.SetActive(false);
     }
 

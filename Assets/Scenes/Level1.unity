@@ -947,5 +947,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: bulletAmount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: modifiers.list.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: modifiers.list.Array.data[0]
+      value: 9133021993335783441
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[9133021993335783441]
+      value: Assembly-CSharp BulletAngleModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[9133021993335783441].arrayAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388356660029797298, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}
+      propertyPath: managedReferences[9133021993335783441].bulletsPerAngleChange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebfbb19031c9cec4fa9d0e825799f215, type: 3}

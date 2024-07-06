@@ -202,6 +202,7 @@ MonoBehaviour:
   removeBulletEvent: {fileID: 11400000, guid: 44bbcd4fbb402264cad656e5d53528c8, type: 2}
   damage: 1
   movementSpeed: 4
+  weapon: {fileID: 673142075}
   ai: {fileID: 4455976589124030296}
 --- !u!114 &7689281888666319298
 MonoBehaviour:

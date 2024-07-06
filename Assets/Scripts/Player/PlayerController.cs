@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LevelInfoSO levelInfoSO;
     [SerializeField] private GameEvent shootEvent;
     internal object onDeath;
+    private float _cooldown;
+
+    private void Update()
+    {
+        if (_cooldown > 0)
+            _cooldown -= Time.deltaTime;
+    }
 
     private void Awake()
     {
@@ -20,7 +28,9 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
+        if (_cooldown > 0) return;
         shootEvent.Raise(gameObject);
+        _cooldown = 1f / playerStats.GetWeapon().FireRate;
     }
 
     public PlayerStats GetStats()
