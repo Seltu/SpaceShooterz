@@ -58,7 +58,7 @@ public class PoolManager : MonoBehaviour
 
     private void AddNewObjectToPool(GameObject prefab, int poolKey, Transform parent, string componentType)
     {
-        GameObject newObject = Instantiate(prefab, parent) as GameObject;
+        GameObject newObject = Instantiate(prefab, parent);
         newObject.SetActive(false);
         _poolDictionary[poolKey].Add(newObject.GetComponent(Type.GetType(componentType)));
     }

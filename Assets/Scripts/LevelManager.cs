@@ -90,10 +90,10 @@ public class LevelManager : MonoBehaviour
     private void MakeEnemy(Wave wave, float delay)
     {
         var enemy = (CurveEnemyAi) PoolManager.Instance.ReuseComponent(enemyPrefabs[(int)wave.enemy].gameObject, transform.position, Quaternion.identity);
-        enemy.gameObject.SetActive(true);
         enemy.OnSetMovement.Invoke(enemyLines[wave.curve], wave.offset, wave.layer, wave.speedMultiplier);
         enemy.SetDelay(delay);
         enemy.OnDeath.AddListener(SpawnPickup);
+        enemy.gameObject.SetActive(true);
     }
 
     private void SpawnPickup(Vector2 pos)

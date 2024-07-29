@@ -10,6 +10,7 @@ public class BulletShooter : MonoBehaviour
     
     private void OnEnable()
     {
+        _bulletTime = 0;
         shootBullet.AddListener<object>(ShootPattern);
     }
 
@@ -20,8 +21,10 @@ public class BulletShooter : MonoBehaviour
 
     private void Update()
     {
-        if(_cooldown > 0)
+        if (_cooldown > 0)
             _cooldown -= Time.deltaTime;
+        else if (_weaponStats.Ship.GetShooting())
+            ShootPattern(_weaponStats.Ship.gameObject);
     }
 
     private void ShootPattern(object ship)

@@ -11,17 +11,16 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
     private Vector2 _offset;
     private bool _inBox;
     private float _speedMultiplier = 1f;
-    protected override void OnEnable()
+    private void OnEnable()
     {
-        ai.OnSetMovement.AddListener(SetMovement);
-        base.OnEnable();
-    }
-    protected override void OnDisable()
+        ai.OnSetMovement.AddListener(SetMovement);    }
+    private void OnDisable()
     {
         _bezierTimer = 0;
         _inBox = false;
+        _offset = Vector2.zero;
+        _speedMultiplier = 0f;
         ai.OnSetMovement.RemoveListener(SetMovement);
-        base.OnDisable();
     }
 
     private void SetMovement(EnemyLine waveCurve, Vector2 waveOffset, int layer, float speedMultiplier)
@@ -49,7 +48,7 @@ public class EnemyCurveMovement: EnemyMovement<CurveEnemyAi>
             if (!_inBox)
             {
                 _inBox = true;
-                ai.SetStopShooting(true);
+                ai.GetStats().SetShooting(false);
             }
             _bezierTimer += Time.deltaTime;
             gameObject.transform.position = Vector3.MoveTowards(transform.position, ai.GetBoxPoint().WorldPoint.position, ai.GetStats().GetMovementSpeed() * Time.deltaTime);

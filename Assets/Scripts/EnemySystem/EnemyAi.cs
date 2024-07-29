@@ -6,29 +6,28 @@ using UnityEngine.Events;
 
 public class EnemyAi : MonoBehaviour
 {
-    [HideInInspector] public UnityEvent OnMove;
     [HideInInspector] public UnityEvent<Vector2> OnDeath;
     [SerializeField] private EnemyStats enemyStats;
     [SerializeField] private GameEvent shootEvent;
-    private EnemyPoint _boxPoint;
-    private float _cooldown;
     private bool _delay;
+    private float _delayTimer;
+    private EnemyPoint _boxPoint;
     private bool _hasBox;
-    private bool _stopShooting;
-    protected virtual void Update()
+
+    private void Update()
     {
-        OnMove.Invoke();
-        if (_cooldown > 0)
-            _cooldown -= Time.deltaTime;
-        if (_stopShooting) return;
-        if (_delay) return;
-        Shoot();
+        if (!_delay) return;
+        if (_delayTimer > 0)
+            _delayTimer -= Time.deltaTime;
+        else
+        {
+            enemyStats.SetShooting(true);
+            _delay = false;
+        }
     }
 
     private void Shoot()
     {
-        if (_cooldown > 0) return;
-        _cooldown = 1f / enemyStats.GetWeapon().FireRate;
         shootEvent.Raise(gameObject);
     }
 
@@ -57,18 +56,14 @@ public class EnemyAi : MonoBehaviour
             _boxPoint = null;
             _hasBox = false;
         }
-        _cooldown = 0;
         gameObject.SetActive(false);
     }
 
     public void SetDelay(float delay)
     {
-        StartCoroutine(WaitDelay(delay));
-    }
-
-    public void SetStopShooting(bool stopShooting)
-    {
-        _stopShooting = stopShooting;
+        _delay = true;
+        _delayTimer = delay;
+        enemyStats.SetShooting(false);
     }
 
     public void SetBoxPoint(EnemyPoint boxPoint)
@@ -84,15 +79,6 @@ public class EnemyAi : MonoBehaviour
     {
         _boxPoint = null;
         _hasBox = false;
-        _stopShooting = false;
-    }
-
-    private IEnumerator WaitDelay(float delay)
-    {
-        if (_delay) yield break;
-        _delay = true;
-        yield return new WaitForSeconds(delay);
-        _delay = false;
     }
 
 }

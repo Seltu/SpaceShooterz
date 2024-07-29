@@ -7,7 +7,7 @@ public class SidewaysEnemyMovement : EnemyMovement<EnemyAi>
     [SerializeField] Rigidbody2D rigidBody;
     [SerializeField] Collider2D enemyCollider;
     private LayerMask boundsLayerMask;
-    protected override void Start()
+    private void Start()
     {
         boundsLayerMask = LayerMask.GetMask("PlayerBarrier");
         rigidBody.velocity = Vector2.right*ai.GetStats().GetMovementSpeed();

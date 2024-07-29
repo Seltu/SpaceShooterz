@@ -1,11 +1,11 @@
+using System;
 using UnityEngine;
 
 public class ShipStats : BasicStats
 {
     [SerializeField] private float damage;
     [SerializeField] private float movementSpeed;
-    [SerializeField] private WeaponStats weapon;
-
+    private bool _shooting;
     public virtual float GetDamage()
     {
         return damage;
@@ -16,8 +16,13 @@ public class ShipStats : BasicStats
         return movementSpeed;
     }
 
-    public WeaponStats GetWeapon()
+    internal void SetShooting(bool value)
     {
-        return weapon;
+        _shooting = value;
+    }
+
+    internal bool GetShooting()
+    {
+        return _shooting;
     }
 }

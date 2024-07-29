@@ -12,13 +12,13 @@ public class BasicStats : MonoBehaviour
     private int id;
     protected float CurrentHp;
 
-    private void OnEnable()
+    private void Start()
     {
         bulletHitEvent.AddListener<object, Bullet>(CheckHit);
         ResetStats();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         bulletHitEvent.RemoveListener<object, Bullet>(CheckHit);
     }

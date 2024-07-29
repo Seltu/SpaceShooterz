@@ -168,7 +168,6 @@ public class EnemyBox : MonoBehaviour
                         //If enemy has to free a taken spot, it prioritizes spots that have been taken the least amount of times
                         if (noVacancy && _points[i][j + layerTotal].TimesTaken <= minTimesTaken)
                         {
-                            Debug.Log(i + " e " + j + layerTotal + " taken " + _points[i][j + layerTotal].TimesTaken);
                             minTimesTaken = _points[i][j + layerTotal].TimesTaken;
                         }
                         else if (noVacancy)

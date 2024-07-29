@@ -8,7 +8,11 @@ public class BossEnemyAi : EnemyAi
     [SerializeField] private Transform shootPointsParent;
     protected int _bossStep = 0;
     private float _bossTimer = 1;
-    protected override void Update()
+    private void OnEnable()
+    {
+        GetStats().SetShooting(true);
+    }
+    private void Update()
     {
         if (_bossTimer > 0)
         {
@@ -27,7 +31,6 @@ public class BossEnemyAi : EnemyAi
                 _bossStep = 0;
             }
         }
-        base.Update();
     }
     protected virtual void OnStep()
     {

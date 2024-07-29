@@ -269,7 +269,7 @@ MonoBehaviour:
       curve: 2
       layer: 0
       speedMultiplier: 1
-      offset: {x: 0, y: 2}
+      offset: {x: 0, y: 0}
     - enemy: 1
       number: 2
       curve: 8
@@ -295,7 +295,7 @@ MonoBehaviour:
       curve: 6
       layer: 0
       speedMultiplier: 1
-      offset: {x: 0, y: 2}
+      offset: {x: 0, y: 0}
     - enemy: 1
       number: 5
       curve: 7

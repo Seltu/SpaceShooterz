@@ -28,9 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot()
     {
-        if (_cooldown > 0) return;
         shootEvent.Raise(gameObject);
-        _cooldown = 1f / playerStats.GetWeapon().FireRate;
     }
 
     public PlayerStats GetStats()

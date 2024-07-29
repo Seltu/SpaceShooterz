@@ -253,6 +253,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   maxHp: 4000
+  bulletHitEvent:
+    event: {fileID: 11400000, guid: 42ecbba2ff215884e86ff80f753ed3ce, type: 2}
+  removeBulletEvent: {fileID: 11400000, guid: 44bbcd4fbb402264cad656e5d53528c8, type: 2}
   damage: 1
   movementSpeed: 5
   ai: {fileID: 1462804188017184245}
@@ -268,9 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46485b31db4072d4497aa4000e14bf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnMove:
-    m_PersistentCalls:
-      m_Calls: []
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1462804188017184136}
   bulletAmount: 1
-  fireRate: 8
+  fireRate: 4
   projectileSpeed: 8
   modifiers:
     list: []
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1462804188017184136}
   bulletAmount: 1
-  fireRate: 8
+  fireRate: 4
   projectileSpeed: 8
   modifiers:
     list: []
